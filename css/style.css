@@ -747,20 +747,13 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 .cta-call-image {
-  background-image: url('/assets/therapist-hero.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-color: #F8FAFC;
+  background-color: #F3E2C8;
   min-height: 280px;
   position: relative;
-}
-.cta-call-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 60%, rgba(11, 95, 88, 0.45) 100%);
-  pointer-events: none;
+  border-right: 1px solid rgba(255,255,255,0.2);
 }
 .cta-call-body {
   padding: 36px 40px;
