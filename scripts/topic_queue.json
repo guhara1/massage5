@@ -81,7 +81,8 @@
           "href": "../../region/seoul/gangnam/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-05-12"
     },
     {
       "slug": "sinsa-late-night",
