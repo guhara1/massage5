@@ -53,55 +53,40 @@ def pick_topic(q: dict) -> dict | None:
     return None
 
 
-PROMPT_TEMPLATE = """당신은 "간다GO" 매거진의 한국인 작성자입니다. 출장마사지·바디케어 관련 정보·건강·라이프스타일 글을 사람이 직접 쓴 것처럼 자연스러운 한국어로 작성합니다.
-
-[주제]
-{title}
-
-[검색 의도]
-이 글을 검색해서 들어오는 사람은 다음을 알고 싶어 합니다. 그 의도를 충족시키는 방향으로 쓰세요.
-"{intent}"
-
-[분량]
-한글 기준 본문 합계 2,500자 ± 100자. 너무 짧거나 길지 않게.
+COMMON_BLOCK = """[분량]
+한글 기준 본문 합계 2,500자 ± 100자.
 
 [구조]
-- 본문은 H2 다섯 개로 구성합니다.
-- 각 H2 제목 앞에 번호: "1. ", "2. ", "3. ", "4. ", "5. "
-- 각 H2 아래는 오직 평문 문단(들)만. 목록(불릿/번호 리스트), 표, 굵은체, 이탤릭, 인용부호 강조, 코드블록 등 어떤 서식도 절대 사용 금지.
+- 본문은 H2 다섯 개. 각 제목 앞에 "1. ", "2. ", "3. ", "4. ", "5. ".
+- 각 H2 아래는 오직 평문 문단만. 목록(불릿/번호), 표, 굵은체, 이탤릭, 강조부호, 코드블록 모두 금지.
 - 각 H2 본문은 약 500자.
 
-[문체 — 이 글이 AI가 쓴 것처럼 읽히면 실패입니다]
-1. 자연스러운 한국어 구어체로. 너무 매끄럽거나 정형적이지 않게.
-2. 다음 AI 정형 표현을 피하세요: "또한", "결론적으로", "정리하자면", "마지막으로", "다음과 같이", "특히", "~할 수 있습니다"의 반복.
-3. 가끔 사람 같은 표현을 섞으세요: "솔직히", "사실", "근데 이게", "어쩌면", "~하는 편이긴 한데", "그러니까".
-4. 종결어미를 단조롭게 두지 마세요. "~죠", "~거든요", "~잖아요"를 한두 번 자연스럽게 섞어도 좋습니다.
-5. 문장 길이를 다양하게 — 짧은 5어절 문장과 25어절 긴 문장을 한 문단 안에 섞으세요.
-6. 가끔 미완결처럼 살짝 흐리거나, 결론을 단정하지 않고 여운을 두어도 좋습니다.
-7. 한 단락 안에서 시점·뉘앙스가 살짝 변해도 됩니다. 너무 일관된 결론 지향 문체는 AI처럼 보입니다.
-8. 사실 전달보다, 사람이 자기 경험을 나누듯 말하는 흐름이 핵심.
+[문체 — AI 티가 나면 실패]
+1. 자연스러운 한국어 구어체. 너무 매끄럽거나 정형적이지 않게.
+2. 다음 AI 정형 표현 피하기: "또한", "결론적으로", "정리하자면", "마지막으로", "다음과 같이", "특히", "~할 수 있습니다"의 반복.
+3. 가끔 사람다운 표현 섞기: "솔직히", "사실", "근데 이게", "어쩌면", "그러니까".
+4. 종결어미를 단조롭게 두지 말 것. "~죠", "~거든요", "~잖아요"를 한두 번 자연스럽게.
+5. 문장 길이 다양화 — 짧은 문장과 긴 문장을 한 문단 안에 섞으세요.
+6. 가끔 결론을 단정하지 않고 여운을 두어도 좋습니다.
+7. 한 단락 안에서 시점·뉘앙스가 살짝 변해도 됩니다.
 
-[E-E-A-T 신호 — 본문 안에 자연스럽게 녹이기]
-- Experience: 구체적 시나리오 한 번 이상 (예: "야근 끝나고 새벽 한 시에..." 같은 상황 묘사).
-- Expertise: 구체적 숫자 한두 번 (시간, 가격대, 주기 같은 것).
-- Authority: 의료·안전 관련 한 줄 짚기 (예: 최근 수술·임신 시에는 사전 안내).
+[E-E-A-T — 본문 안에 자연스럽게 녹이기]
+- Experience: 구체적 시나리오 한 번 이상.
+- Expertise: 구체적 숫자 한두 번 (시간·가격대·주기).
+- Authority: 의료·안전 관련 한 줄 짚기.
 - Trust: 합법적 정상 영업·선입금 거절 같은 안전 원칙을 자연스럽게 한 번.
-이 모든 신호는 따로 섹션을 두지 말고, 본문 흐름 안에 녹여 주세요.
+따로 섹션 두지 말고 본문 흐름에 녹이세요.
 
 [금지어]
-"1등", "최고", "100%", "보장", "완벽", "베스트", "1위", "추천 1순위", "치료된다", "낫는다", "효과가 확실" 같은 단정·과장·의학적 단정 표현은 절대 사용 금지.
-
-[지역 맥락]
-가능하면 본문에 다음 지역명을 1~2회 자연스럽게 녹이세요 (억지로 끼우지 말고, 시나리오·예시 안에 자연스럽게): {region_hint}
-지역 힌트가 비어있다면 굳이 지역을 끌어들이지 않아도 됩니다.
+"1등", "최고", "100%", "보장", "완벽", "베스트", "1위", "추천 1순위", "치료된다", "낫는다", "효과가 확실" 사용 금지.
 
 [출력 형식]
-오직 JSON만 출력하세요. JSON 앞뒤로 어떤 설명·인사·코드블록 표시도 붙이지 마세요. 정확히 아래 키들로 구성하세요.
+오직 JSON만 출력. JSON 앞뒤 어떤 설명·인사·코드블록 마크다운 금지.
 
 {{
-  "title": "60자 이내 매력적 제목 (클릭 유도되되 과장 없이)",
+  "title": "60자 이내 제목 (클릭 유도되되 과장 없이)",
   "description": "140자 이내 메타 디스크립션",
-  "h2_1": "1. 첫 H2 제목 (10~25자)",
+  "h2_1": "1. 첫 H2 제목 (10~28자)",
   "p_1": "약 500자 본문",
   "h2_2": "2. 두 번째 H2 제목",
   "p_2": "약 500자 본문",
@@ -114,14 +99,65 @@ PROMPT_TEMPLATE = """당신은 "간다GO" 매거진의 한국인 작성자입니
 }}
 """
 
+NARRATIVE_PROMPT = """당신은 "간다GO" 매거진의 한국인 작성자입니다. 특정 지역의 출장마사지 이용 경험을 사람의 일기·에세이처럼 자연스럽게 풀어내는 글을 씁니다. 광고 톤이 아니라, 그 동네에 살거나 일하는 사람이 자기 경험을 이야기하듯 솔직한 톤이 핵심입니다.
+
+[주제]
+{title}
+
+[지역]
+{district_name}
+
+[배경 시나리오 — 이 시나리오를 본문 안에 자연스럽게 녹여 주세요]
+{scenario}
+
+[검색 의도]
+"{intent}"
+
+[지역 디테일 — 본문에 반드시 한두 번 녹일 것]
+{region_hint}
+그 동네에만 있는 작은 디테일(도로 사정, 주거 형태, 시간대 분위기, 인근 권역과의 비교 등)을 한두 줄이라도 넣어 주세요. 그래야 thin content가 안 됩니다.
+
+[톤 — 특별 강조]
+- 1인칭 시점이 자연스러우면 사용 (저는, 제 친구가). 다만 무리해서 1인칭으로 끌고 가지는 마세요.
+- 광고·홍보 톤 절대 금지. "이용해 보세요" 같은 권유형보다는 "받아봤더니" 같은 회상·관찰형이 더 어울립니다.
+- 단언보다 여운. "이게 답이다"보다 "이 정도가 적당하더라" 식.
+- 종결어미 한 패턴으로 통일하지 말 것. 한 글 안에 "~더라고요", "~거든요", "~잖아요", "~죠"를 자연스럽게 섞으세요.
+
+""" + COMMON_BLOCK
+
+
+GUIDE_PROMPT = """당신은 "간다GO" 매거진의 한국인 작성자입니다. 출장마사지·바디케어 관련 정보·건강·라이프스타일 글을 사람이 직접 쓴 것처럼 자연스러운 한국어로 작성합니다.
+
+[주제]
+{title}
+
+[검색 의도]
+"{intent}"
+
+[지역 맥락]
+가능하면 본문에 다음 지역명을 1~2회 자연스럽게 녹이세요 (억지로 끼우지 말고): {region_hint}
+지역 힌트가 비어있다면 굳이 지역을 끌어들이지 않아도 됩니다.
+
+""" + COMMON_BLOCK
+
 
 def call_claude(topic: dict, retry_hint: str = "") -> dict:
     client = Anthropic()
-    prompt = PROMPT_TEMPLATE.format(
-        title=topic["title"],
-        intent=topic["search_intent"],
-        region_hint=topic.get("region_hint", "") or "(없음)",
-    )
+    post_type = topic.get("post_type", "guide")
+    if post_type == "narrative":
+        prompt = NARRATIVE_PROMPT.format(
+            title=topic["title"],
+            district_name=topic.get("district_name", ""),
+            scenario=topic.get("scenario", ""),
+            intent=topic["search_intent"],
+            region_hint=topic.get("region_hint", "") or "(없음)",
+        )
+    else:
+        prompt = GUIDE_PROMPT.format(
+            title=topic["title"],
+            intent=topic["search_intent"],
+            region_hint=topic.get("region_hint", "") or "(없음)",
+        )
     if retry_hint:
         prompt += f"\n\n[재시도 안내]\n이전 출력에서 다음 문제가 있었습니다. 수정해 주세요:\n{retry_hint}\n"
 
@@ -211,12 +247,11 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
         for i in range(1, 6)
     )
 
-    related_cards = "\n".join(
-        f'      <a href="{esc(r["href"])}" class="card">\n'
-        f'        <h3>{esc(r["text"])}</h3>\n'
-        f'      </a>'
+    related_items = "\n".join(
+        f'      <li><a href="{esc(r["href"])}">{esc(r["text"])}</a></li>'
         for r in topic["related_links"]
     )
+    related_label = topic.get("related_label", "지역별 이용 정보 기반")
 
     jsonld = {
         "@context": "https://schema.org",
@@ -252,7 +287,7 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
 <link rel="canonical" href="{post_url}" />
 <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body>
+<body class="magazine-post">
 
 <div class="topbar"><div class="container">
   <a href="../../support/index.html#guide">처음 이용 안내</a>
@@ -284,18 +319,17 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
 {sections_html}
 </div></div>
 
-<section class="section alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Related</span>
-      <h2>함께 보면 좋은 글</h2>
-      <p>이 글과 함께 보면 도움 될 페이지를 골라뒀습니다.</p>
+<div class="container">
+  <aside class="related-dark">
+    <div class="related-dark__head">
+      <h2><span class="pin">📌</span> 함께 보면 좋은 글</h2>
+      <span class="sub">({related_label})</span>
     </div>
-    <div class="grid cols-3">
-{related_cards}
-    </div>
-  </div>
-</section>
+    <ul class="related-dark__list">
+{related_items}
+    </ul>
+  </aside>
+</div>
 
 <footer class="site-footer">
   <div class="footer-trust">

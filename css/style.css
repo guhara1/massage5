@@ -2127,6 +2127,101 @@ details.faq p {
 
 /* Floating CTA sits over footer's bottom area — no body padding needed */
 
+/* Dark "함께 보면 좋은 글" — region narrative style */
+.related-dark {
+  background: linear-gradient(180deg, #1F1814 0%, #14100C 100%);
+  border-radius: 20px;
+  padding: 36px 36px 32px;
+  margin: 56px 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+.related-dark::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff7f00, #ffa340, transparent);
+}
+.related-dark__head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.related-dark__head h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.related-dark__head h2 .pin {
+  color: #ff7f00;
+  font-size: 16px;
+}
+.related-dark__head .sub {
+  color: #94A3B8;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -.1px;
+}
+.related-dark__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 0;
+}
+.related-dark__list li {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding: 14px 0;
+}
+.related-dark__list li:last-child,
+.related-dark__list li:nth-last-child(2):nth-child(odd) {
+  border-bottom: none;
+}
+.related-dark__list a {
+  color: #E8E4DE;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  letter-spacing: -.2px;
+  transition: color .15s ease, transform .15s ease;
+  word-break: keep-all;
+}
+.related-dark__list a::before {
+  content: "•";
+  color: #ff7f00;
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+.related-dark__list a:hover {
+  color: #ff7f00;
+  transform: translateX(2px);
+}
+
+@media (max-width: 720px) {
+  .related-dark {
+    padding: 28px 22px 24px;
+    border-radius: 16px;
+  }
+  .related-dark__list { grid-template-columns: 1fr; column-gap: 0; }
+  .related-dark__list li { padding: 12px 0; }
+  .related-dark__list li:last-child { border-bottom: none; }
+}
+
 /* Magazine post — premium reading layout */
 .post-meta {
   font-size: 13px;
