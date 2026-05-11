@@ -329,12 +329,6 @@ img { max-width: 100%; display: block; }
   border-radius: 4px;
   overflow: hidden;
 }
-.directory-row {
-  grid-template-columns: repeat(8, 1fr);
-}
-.directory-grid {
-  grid-template-columns: repeat(8, 1fr);
-}
 .dir-btn {
   display: flex;
   align-items: center;
@@ -355,24 +349,37 @@ img { max-width: 100%; display: block; }
   color: var(--primary);
 }
 .dir-btn.active {
-  background: var(--primary);
+  background: #1E3A8A;
   color: #fff;
   font-weight: 700;
 }
 .dir-btn.active:hover {
-  background: var(--primary-hover);
+  background: #1E40AF;
   color: #fff;
 }
+.dir-empty {
+  background: #fff;
+  pointer-events: none;
+  cursor: default;
+}
+.dir-empty:hover { background: #fff; }
 
-@media (max-width: 960px) {
+.directory-row { grid-template-columns: repeat(9, 1fr); }
+.directory-grid { grid-template-columns: repeat(8, 1fr); }
+
+@media (max-width: 1024px) {
+  .directory-row { grid-template-columns: repeat(6, 1fr); }
+  .directory-grid { grid-template-columns: repeat(6, 1fr); }
+}
+@media (max-width: 720px) {
   .directory-row { grid-template-columns: repeat(4, 1fr); }
   .directory-grid { grid-template-columns: repeat(4, 1fr); }
-  .dir-btn { font-size: 13.5px; padding: 12px 6px; min-height: 44px; }
+  .dir-btn { font-size: 13px; padding: 11px 6px; min-height: 42px; }
 }
 @media (max-width: 480px) {
-  .directory-row { grid-template-columns: repeat(4, 1fr); }
+  .directory-row { grid-template-columns: repeat(3, 1fr); }
   .directory-grid { grid-template-columns: repeat(3, 1fr); }
-  .dir-btn { font-size: 13px; padding: 11px 4px; min-height: 42px; }
+  .dir-btn { font-size: 12.5px; padding: 10px 4px; min-height: 40px; }
   .directory-title { font-size: 15px; }
 }
 
