@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>지역별 찾기 – 간다GO</title>
-<meta name="description" content="서울·경기·인천 및 전국 광역시별로 출장마사지 정보를 찾아보세요." />
+<meta name="description" content="전국 17개 시·도 출장마사지 정보를 한 곳에서. 수도권·광역시·도 권역별로 손쉽게 찾아보세요." />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -16,33 +16,35 @@
 </div></div>
 
 <header class="site-header"><div class="container header-inner">
-  <a href="../index.html" class="brand">
-    <span class="logo-mark">간</span>
-    <span class="brand-name">간다<span class="accent">GO</span></span>
-  </a>
+  <a href="../index.html" class="brand"><span class="logo-mark">간</span><span class="brand-name">간다<span class="accent">GO</span></span></a>
   <nav class="nav" aria-label="주메뉴">
     <div class="nav-item" data-section="home"><a class="nav-link" href="../index.html">홈</a></div>
     <div class="nav-item active" data-section="region">
       <a class="nav-link" href="index.html">지역별 찾기 ▾</a>
-      <div class="dropdown">
-        <a href="seoul.html">서울</a>
-        <a href="gyeonggi.html">경기</a>
-        <a href="incheon.html">인천</a>
-        <a href="other.html">기타 광역시</a>
+      <div class="dropdown wide">
+        <div class="dropdown-title">수도권</div>
+        <a href="seoul/index.html">서울</a>
+        <a href="gyeonggi/index.html">경기</a>
+        <a href="incheon/index.html">인천</a>
+        <div class="dropdown-title">광역시</div>
+        <a href="busan/index.html">부산</a>
+        <a href="daegu/index.html">대구</a>
+        <a href="daejeon/index.html">대전</a>
+        <a href="gwangju/index.html">광주</a>
+        <a href="ulsan/index.html">울산</a>
+        <a href="sejong/index.html">세종</a>
+        <div class="dropdown-title">도 (道)</div>
+        <a href="gangwon/index.html">강원</a>
+        <a href="chungbuk/index.html">충북</a>
+        <a href="chungnam/index.html">충남</a>
+        <a href="gyeongbuk/index.html">경북</a>
+        <a href="gyeongnam/index.html">경남</a>
+        <a href="jeonbuk/index.html">전북</a>
+        <a href="jeonnam/index.html">전남</a>
+        <a href="jeju/index.html">제주</a>
       </div>
     </div>
-    <div class="nav-item" data-section="services">
-      <a class="nav-link" href="../services/index.html">서비스 ▾</a>
-      <div class="dropdown">
-        <a href="../services/thai.html">타이 마사지</a>
-        <a href="../services/aroma.html">아로마 마사지</a>
-        <a href="../services/swedish.html">스웨디시</a>
-        <a href="../services/lomi.html">로미로미</a>
-        <a href="../services/homecare.html">홈케어</a>
-        <a href="../services/women.html">여성전용</a>
-        <a href="../services/couple.html">커플마사지</a>
-      </div>
-    </div>
+    <div class="nav-item" data-section="services"><a class="nav-link" href="../services/index.html">서비스</a></div>
     <div class="nav-item" data-section="reviews"><a class="nav-link" href="../reviews/index.html">이용 후기</a></div>
     <div class="nav-item" data-section="support"><a class="nav-link" href="../support/index.html">고객지원·안전</a></div>
     <div class="nav-item" data-section="magazine"><a class="nav-link" href="../magazine/index.html">매거진</a></div>
@@ -51,96 +53,168 @@
   <button class="menu-toggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
 </div></header>
 
-<section class="page-header"><div class="container">
-  <div class="breadcrumb"><a href="../index.html">홈</a><span class="sep">/</span><span>지역별 찾기</span></div>
-  <h1>지역별 출장마사지 찾기</h1>
-  <p>전국 지역별로 출장마사지 정보를 모았습니다. 가까운 지역을 선택하세요.</p>
-</div></section>
-
-<section class="section">
+<!-- ===== Hero ===== -->
+<section class="region-hero">
   <div class="container">
-    <div class="district-row" style="margin-bottom:32px;">
-      <a href="seoul.html" class="dir-btn">서울</a>
-      <a href="gyeonggi.html" class="dir-btn">경기</a>
-      <a href="incheon.html" class="dir-btn">인천</a>
-      <a href="daejeon.html" class="dir-btn">대전</a>
-      <a href="gangwon.html" class="dir-btn">강원</a>
-      <a href="chungbuk.html" class="dir-btn">충북</a>
-      <a href="sejong.html" class="dir-btn">세종</a>
-      <a href="chungnam.html" class="dir-btn">충남</a>
-      <a href="gyeongbuk.html" class="dir-btn">경북</a>
-      <a href="gyeongnam.html" class="dir-btn">경남</a>
-      <a href="jeonbuk.html" class="dir-btn">전북</a>
-      <a href="jeonnam.html" class="dir-btn">전남</a>
-      <a href="gwangju.html" class="dir-btn">광주</a>
-      <a href="ulsan.html" class="dir-btn">울산</a>
-      <a href="daegu.html" class="dir-btn">대구</a>
-      <a href="busan.html" class="dir-btn">부산</a>
-      <a href="jeju.html" class="dir-btn">제주</a>
+    <div class="breadcrumb breadcrumb-hero"><a href="../index.html">홈</a><span class="sep">/</span><span>지역별 찾기</span></div>
+    <h1>전국 어디든, <span class="accent-text">간다GO</span></h1>
+    <p class="hero-sub">17개 시·도 · 228개 시·군·구 · 933개 행정동 출장마사지 정보를 한곳에서</p>
+    <div class="hero-stats">
+      <div class="stat-box"><span class="stat-num">17</span><span class="stat-label">시·도</span></div>
+      <div class="stat-box"><span class="stat-num">228</span><span class="stat-label">시·군·구</span></div>
+      <div class="stat-box"><span class="stat-num">933+</span><span class="stat-label">행정동</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 수도권 ===== -->
+<section class="region-section sudokwon">
+  <div class="container">
+    <div class="region-section__head">
+      <span class="region-badge sudokwon-badge">수도권</span>
+      <h2>가장 활발한 출장 권역</h2>
+      <p>서울·경기·인천의 도심·신도시에서 다양한 코스를 이용하실 수 있습니다.</p>
+    </div>
+    <div class="region-mega-grid">
+      <a href="seoul/index.html" class="mega-card mega-card--lg">
+        <div class="mega-card__mark">서울</div>
+        <h3 class="mega-card__title">서울특별시</h3>
+        <p class="mega-card__desc">강남·송파·마포·종로 등 25개 자치구</p>
+        <div class="mega-card__stats">
+          <span><strong>25</strong> 자치구</span>
+          <span><strong>258</strong> 행정동</span>
+        </div>
+        <span class="mega-card__cta">서울 보기 →</span>
+      </a>
+      <a href="gyeonggi/index.html" class="mega-card mega-card--lg">
+        <div class="mega-card__mark">경기</div>
+        <h3 class="mega-card__title">경기도</h3>
+        <p class="mega-card__desc">수원·성남·고양·용인 등 31개 시·군</p>
+        <div class="mega-card__stats">
+          <span><strong>31</strong> 시·군</span>
+          <span><strong>318</strong> 행정동</span>
+        </div>
+        <span class="mega-card__cta">경기 보기 →</span>
+      </a>
+      <a href="incheon/index.html" class="mega-card mega-card--lg">
+        <div class="mega-card__mark">인천</div>
+        <h3 class="mega-card__title">인천광역시</h3>
+        <p class="mega-card__desc">송도·부평·청라 등 10개 자치구·군</p>
+        <div class="mega-card__stats">
+          <span><strong>10</strong> 자치구·군</span>
+          <span><strong>72</strong> 행정동</span>
+        </div>
+        <span class="mega-card__cta">인천 보기 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 광역시 ===== -->
+<section class="region-section gwangyeoksi">
+  <div class="container">
+    <div class="region-section__head">
+      <span class="region-badge gwangyeoksi-badge">광역시</span>
+      <h2>전국 6대 광역시</h2>
+      <p>부산·대구·대전·광주·울산·세종 등 도심 중심의 출장 코스가 안정적으로 운영됩니다.</p>
+    </div>
+    <div class="region-grid-6">
+      <a href="busan/index.html" class="region-tile" style="--accent:#2563EB">
+        <div class="region-tile__mark">부산</div>
+        <h3>부산광역시</h3>
+        <p>해운대·서면·광안 등</p>
+        <span class="region-tile__count">16 자치구·군 · 95 행정동</span>
+      </a>
+      <a href="daegu/index.html" class="region-tile" style="--accent:#7C3AED">
+        <div class="region-tile__mark">대구</div>
+        <h3>대구광역시</h3>
+        <p>중구·수성·달서 등</p>
+        <span class="region-tile__count">8 자치구·군 · 60 행정동</span>
+      </a>
+      <a href="daejeon/index.html" class="region-tile" style="--accent:#0891B2">
+        <div class="region-tile__mark">대전</div>
+        <h3>대전광역시</h3>
+        <p>둔산·유성 등</p>
+        <span class="region-tile__count">5 자치구 · 49 행정동</span>
+      </a>
+      <a href="gwangju/index.html" class="region-tile" style="--accent:#16A34A">
+        <div class="region-tile__mark">광주</div>
+        <h3>광주광역시</h3>
+        <p>상무·첨단 등</p>
+        <span class="region-tile__count">5 자치구 · 41 행정동</span>
+      </a>
+      <a href="ulsan/index.html" class="region-tile" style="--accent:#DC2626">
+        <div class="region-tile__mark">울산</div>
+        <h3>울산광역시</h3>
+        <p>남구·동구·울주 등</p>
+        <span class="region-tile__count">5 자치구·군 · 30 행정동</span>
+      </a>
+      <a href="sejong/index.html" class="region-tile" style="--accent:#EA580C">
+        <div class="region-tile__mark">세종</div>
+        <h3>세종특별자치시</h3>
+        <p>정부청사·신도심</p>
+        <span class="region-tile__count">1 시 · 10 행정동</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 도 ===== -->
+<section class="region-section dodo">
+  <div class="container">
+    <div class="region-section__head">
+      <span class="region-badge dodo-badge">도 (道)</span>
+      <h2>전국 8개 도</h2>
+      <p>각 도의 주요 시·군별 정보를 권역별로 확인하실 수 있습니다.</p>
+    </div>
+    <div class="region-grid-8">
+      <a href="gangwon/index.html" class="province-tile">
+        <div class="province-tile__icon">강</div>
+        <div class="province-tile__body"><h3>강원특별자치도</h3><p>춘천·원주·강릉 등 18개 시·군</p></div>
+      </a>
+      <a href="chungbuk/index.html" class="province-tile">
+        <div class="province-tile__icon">충북</div>
+        <div class="province-tile__body"><h3>충청북도</h3><p>청주·충주·제천 등 11개 시·군</p></div>
+      </a>
+      <a href="chungnam/index.html" class="province-tile">
+        <div class="province-tile__icon">충남</div>
+        <div class="province-tile__body"><h3>충청남도</h3><p>천안·아산·서산 등 15개 시·군</p></div>
+      </a>
+      <a href="gyeongbuk/index.html" class="province-tile">
+        <div class="province-tile__icon">경북</div>
+        <div class="province-tile__body"><h3>경상북도</h3><p>포항·경주·구미 등 22개 시·군</p></div>
+      </a>
+      <a href="gyeongnam/index.html" class="province-tile">
+        <div class="province-tile__icon">경남</div>
+        <div class="province-tile__body"><h3>경상남도</h3><p>창원·진주·김해 등 18개 시·군</p></div>
+      </a>
+      <a href="jeonbuk/index.html" class="province-tile">
+        <div class="province-tile__icon">전북</div>
+        <div class="province-tile__body"><h3>전북특별자치도</h3><p>전주·군산·익산 등 14개 시·군</p></div>
+      </a>
+      <a href="jeonnam/index.html" class="province-tile">
+        <div class="province-tile__icon">전남</div>
+        <div class="province-tile__body"><h3>전라남도</h3><p>목포·여수·순천 등 22개 시·군</p></div>
+      </a>
+      <a href="jeju/index.html" class="province-tile">
+        <div class="province-tile__icon">제주</div>
+        <div class="province-tile__body"><h3>제주특별자치도</h3><p>제주시·서귀포시 2개 시</p></div>
+      </a>
     </div>
   </div>
 </section>
 
 <section class="section alt">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">수도권</span>
-      <h2>수도권</h2>
-    </div>
-    <div class="grid cols-3">
-      <a href="seoul.html" class="card"><div class="icon">서</div><h3>서울</h3><p>25개 자치구.</p></a>
-      <a href="gyeonggi.html" class="card"><div class="icon">경</div><h3>경기</h3><p>31개 시·군.</p></a>
-      <a href="incheon.html" class="card"><div class="icon">인</div><h3>인천</h3><p>10개 자치구·군.</p></a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">광역시·도</span>
-      <h2>광역시</h2>
-    </div>
-    <div class="grid cols-3">
-      <a href="busan.html" class="card"><div class="icon">부</div><h3>부산</h3><p>16개 자치구·군.</p></a>
-      <a href="daegu.html" class="card"><div class="icon">대</div><h3>대구</h3><p>8개 자치구·군.</p></a>
-      <a href="daejeon.html" class="card"><div class="icon">대</div><h3>대전</h3><p>5개 자치구.</p></a>
-      <a href="gwangju.html" class="card"><div class="icon">광</div><h3>광주</h3><p>5개 자치구.</p></a>
-      <a href="ulsan.html" class="card"><div class="icon">울</div><h3>울산</h3><p>5개 자치구·군.</p></a>
-      <a href="sejong.html" class="card"><div class="icon">세</div><h3>세종</h3><p>특별자치시.</p></a>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">도</span>
-      <h2>도 (道)</h2>
-    </div>
-    <div class="grid cols-4">
-      <a href="gangwon.html" class="card"><div class="icon">강</div><h3>강원</h3><p>18개 시·군.</p></a>
-      <a href="chungbuk.html" class="card"><div class="icon">충</div><h3>충북</h3><p>11개 시·군.</p></a>
-      <a href="chungnam.html" class="card"><div class="icon">충</div><h3>충남</h3><p>15개 시·군.</p></a>
-      <a href="gyeongbuk.html" class="card"><div class="icon">경</div><h3>경북</h3><p>22개 시·군.</p></a>
-      <a href="gyeongnam.html" class="card"><div class="icon">경</div><h3>경남</h3><p>18개 시·군.</p></a>
-      <a href="jeonbuk.html" class="card"><div class="icon">전</div><h3>전북</h3><p>14개 시·군.</p></a>
-      <a href="jeonnam.html" class="card"><div class="icon">전</div><h3>전남</h3><p>22개 시·군.</p></a>
-      <a href="jeju.html" class="card"><div class="icon">제</div><h3>제주</h3><p>2개 시.</p></a>
-    </div>
+    <div class="callout info"><strong>안전 안내:</strong> 모든 이용 전 업체의 사업자 정보·연락처를 확인하시고, 선입금 요청 시 즉시 중단하세요. <a href="../support/index.html#safety">안전 가이드 →</a></div>
   </div>
 </section>
 
 <footer class="site-footer"><div class="container">
-  <div>
-    <a href="../index.html" class="brand"><span class="logo-mark">간</span><span class="brand-name">간다<span class="accent">GO</span></span></a>
-    <p>전국 출장마사지 정보 플랫폼.</p>
-  </div>
-  <div><h4>지역</h4><a href="seoul.html">서울</a><a href="gyeonggi.html">경기</a><a href="incheon.html">인천</a><a href="other.html">기타 광역시</a></div>
+  <div><a href="../index.html" class="brand"><span class="logo-mark">간</span><span class="brand-name">간다<span class="accent">GO</span></span></a><p>전국 출장마사지 정보 플랫폼.</p></div>
+  <div><h4>지역</h4><a href="seoul/index.html">서울</a><a href="gyeonggi/index.html">경기</a><a href="incheon/index.html">인천</a><a href="busan/index.html">부산</a></div>
   <div><h4>서비스</h4><a href="../services/thai.html">타이</a><a href="../services/aroma.html">아로마</a><a href="../services/swedish.html">스웨디시</a><a href="../services/homecare.html">홈케어</a></div>
-  <div><h4>지원</h4><a href="../support/index.html#guide">이용 안내</a><a href="../support/index.html#safety">안전 가이드</a><a href="../support/index.html#faq">FAQ</a><a href="../support/index.html#partner">제휴 문의</a></div>
+  <div><h4>지원</h4><a href="../support/index.html#guide">이용 안내</a><a href="../support/index.html#safety">안전 가이드</a><a href="../support/index.html#faq">FAQ</a></div>
 </div><div class="footer-bottom">© 2026 간다GO. All rights reserved.</div></footer>
-
 <script src="../js/main.js"></script>
-</body>
-</html>
+</body></html>

@@ -314,6 +314,342 @@ img { max-width: 100%; display: block; }
 }
 .card .tag:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
 
+/* ===========================================================
+   Region Index — Visual Hero & Color-coded Tiles
+   =========================================================== */
+.region-hero {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 50%, #2DD4BF 100%);
+  color: #fff;
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.region-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.region-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40%; left: -5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.region-hero .container { position: relative; z-index: 1; }
+.breadcrumb-hero {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 20px;
+}
+.breadcrumb-hero a { color: rgba(255,255,255,0.95); }
+.breadcrumb-hero a:hover { color: #fff; }
+.breadcrumb-hero .sep { color: rgba(255,255,255,0.5); }
+.region-hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 14px;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #fff;
+}
+.region-hero h1 .accent-text {
+  background: linear-gradient(90deg, #FEF3C7, #FDE68A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.region-hero .hero-sub {
+  font-size: 17px;
+  margin: 0 0 36px;
+  opacity: 0.95;
+  max-width: 640px;
+}
+.hero-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.stat-box {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+}
+.stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  line-height: 1;
+  color: #fff;
+}
+.stat-label {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 6px;
+  letter-spacing: .04em;
+}
+
+/* Region section wrappers */
+.region-section {
+  padding: 64px 0;
+}
+.region-section.gwangyeoksi { background: var(--bg-alt); }
+.region-section.dodo { background: var(--bg); }
+.region-section__head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.region-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.sudokwon-badge { background: #CCFBF1; color: #0F766E; }
+.gwangyeoksi-badge { background: #DBEAFE; color: #1E40AF; }
+.dodo-badge { background: #FEF3C7; color: #92400E; }
+.region-section__head h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 0 0 10px;
+  letter-spacing: -.5px;
+  font-weight: 800;
+}
+.region-section__head p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15.5px;
+}
+
+/* 수도권 mega cards */
+.region-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.mega-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.mega-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px -10px rgba(15, 118, 110, 0.25);
+}
+.mega-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 140px; height: 140px;
+  background: linear-gradient(135deg, var(--primary-soft), transparent);
+  border-radius: 0 0 0 100%;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.mega-card__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+.mega-card__title {
+  font-size: 22px;
+  margin: 0 0 8px;
+  letter-spacing: -.5px;
+  color: var(--text);
+  font-weight: 800;
+}
+.mega-card__desc {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+.mega-card__stats {
+  display: flex;
+  gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+.mega-card__stats span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.mega-card__stats strong {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 800;
+  margin-right: 4px;
+}
+.mega-card__cta {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform .15s;
+}
+.mega-card:hover .mega-card__cta { transform: translateX(4px); }
+
+/* 광역시 tiles - color-coded */
+.region-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.region-tile {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.region-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, var(--primary));
+  box-shadow: 0 14px 30px -10px rgba(0,0,0,0.15);
+}
+.region-tile::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: var(--accent, var(--primary));
+}
+.region-tile__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; height: 48px;
+  background: var(--accent, var(--primary));
+  color: #fff;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: -.3px;
+}
+.region-tile h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  letter-spacing: -.3px;
+  font-weight: 800;
+}
+.region-tile p {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin: 0 0 14px;
+}
+.region-tile__count {
+  display: inline-block;
+  font-size: 12px;
+  background: var(--bg-alt);
+  color: var(--text-soft);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: -.1px;
+}
+
+/* 도 province tiles - horizontal layout */
+.region-grid-8 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.province-tile {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.province-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px -8px rgba(15, 118, 110, 0.2);
+}
+.province-tile__icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  color: #92400E;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+.province-tile__body { flex: 1; min-width: 0; }
+.province-tile h3 {
+  font-size: 15px;
+  margin: 0 0 3px;
+  font-weight: 800;
+  letter-spacing: -.3px;
+}
+.province-tile p {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+  .region-mega-grid { grid-template-columns: 1fr; }
+  .region-grid-6 { grid-template-columns: repeat(2, 1fr); }
+  .region-grid-8 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .region-hero { padding: 56px 0 60px; }
+  .hero-stats { gap: 10px; }
+  .stat-box { padding: 12px 18px; min-width: 90px; }
+  .stat-num { font-size: 26px; }
+  .region-section { padding: 48px 0; }
+  .region-grid-6 { grid-template-columns: 1fr; }
+  .region-grid-8 { grid-template-columns: 1fr; }
+  .mega-card { padding: 22px 20px; }
+}
+
 /* === Article content (service detail pages) === */
 .article-wrap {
   background: var(--bg);
