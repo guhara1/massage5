@@ -118,8 +118,9 @@ img { max-width: 100%; display: block; }
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 0;
+  margin-top: 8px;
   min-width: 240px;
   background: var(--bg);
   border: 1px solid var(--border);
@@ -129,11 +130,39 @@ img { max-width: 100%; display: block; }
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
-  transition: opacity .15s, transform .15s;
+  transition: opacity .18s ease, transform .18s ease;
+  transition-delay: .12s;
 }
 .dropdown.wide { min-width: 560px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+
+/* Invisible bridge to prevent hover loss in the gap between nav-link and dropdown */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -16px;
+  right: -16px;
+  height: 12px;
+}
+
 .nav-item:hover .dropdown,
-.nav-item:focus-within .dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.nav-item:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+/* Also extend nav-link's hover area slightly to bridge the gap on entry */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px;
+}
 .dropdown-title {
   grid-column: 1 / -1;
   font-size: 12px;
