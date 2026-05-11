@@ -285,6 +285,61 @@ img { max-width: 100%; display: block; }
 }
 .card .tag:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
 
+/* === Article content (service detail pages) === */
+.article-wrap {
+  background: var(--bg);
+  padding: 48px 0 32px;
+}
+.article-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.article-content h2 {
+  font-size: 24px;
+  margin: 48px 0 18px;
+  letter-spacing: -.4px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--text);
+  font-weight: 800;
+}
+.article-content h2:first-child,
+.article-section:first-child h2 { margin-top: 8px; }
+.article-content h3 {
+  font-size: 18px;
+  margin: 28px 0 10px;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -.2px;
+}
+.article-content p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--text-soft);
+  margin: 0 0 14px;
+  word-break: keep-all;
+}
+.article-content p:last-child { margin-bottom: 0; }
+.article-content ul {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-soft);
+  padding-left: 20px;
+  margin: 8px 0 14px;
+}
+.article-content ul li { margin-bottom: 4px; }
+.article-section { margin-bottom: 28px; }
+.article-content .faq-list { margin-top: 8px; }
+.article-content .faq-list details.faq { margin-bottom: 8px; }
+
+@media (max-width: 720px) {
+  .article-wrap { padding: 32px 0 24px; }
+  .article-content { padding: 0 18px; }
+  .article-content h2 { font-size: 20px; margin: 36px 0 14px; padding-bottom: 10px; }
+  .article-content h3 { font-size: 16.5px; margin: 22px 0 8px; }
+  .article-content p, .article-content ul { font-size: 14.5px; line-height: 1.8; }
+}
+
 /* === Directory style (region + theme buttons) === */
 .directory { padding: 56px 0; background: var(--bg); }
 .directory-block { margin-bottom: 28px; }
