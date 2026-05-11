@@ -26,6 +26,7 @@
 
 html { scroll-behavior: smooth; }
 
+html { background: #0F172A; }
 body {
   margin: 0;
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -1829,22 +1830,95 @@ details.faq p {
 .site-footer {
   background: #0F172A;
   color: #94A3B8;
-  padding: 56px 0 32px;
+  padding: 64px 0 140px;
   margin-top: 60px;
 }
-.site-footer .container { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; }
-.site-footer h4 { color: #fff; font-size: 14px; margin: 0 0 12px; letter-spacing: .04em; }
-.site-footer a { color: #CBD5E1; font-size: 13px; display: block; padding: 4px 0; }
-.site-footer a:hover { color: var(--accent); }
-.site-footer .brand { color: #fff; margin-bottom: 12px; }
+.site-footer .container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 32px 28px;
+}
+.site-footer h4 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 14px;
+  letter-spacing: .04em;
+  font-weight: 700;
+}
+.site-footer a {
+  color: #CBD5E1;
+  font-size: 13px;
+  display: block;
+  padding: 5px 0;
+  transition: color .15s ease;
+}
+.site-footer a:hover { color: #ff7f00; }
+.site-footer .brand { color: #fff; margin-bottom: 14px; }
 .site-footer .brand .brand-name { color: #fff; }
-.site-footer p { font-size: 13px; line-height: 1.6; color: #94A3B8; margin: 0 0 6px; }
+.site-footer p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #94A3B8;
+  margin: 0 0 16px;
+}
+.footer-brand .footer-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: rgba(255, 127, 0, 0.12);
+  border: 1px solid rgba(255, 127, 0, 0.32);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 4px;
+}
+.footer-brand .footer-tel:hover {
+  background: rgba(255, 127, 0, 0.18);
+  border-color: rgba(255, 127, 0, 0.55);
+  color: #fff;
+}
+.footer-brand .ft-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7f00, #ffa340);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+}
+.footer-brand .ft-text { display: flex; flex-direction: column; line-height: 1.2; }
+.footer-brand .ft-label { font-size: 11px; color: #CBD5E1; letter-spacing: .06em; }
+.footer-brand .ft-num { font-size: 16px; font-weight: 800; color: #fff; }
+
 .footer-bottom {
   border-top: 1px solid #1E293B;
-  margin-top: 36px;
-  padding-top: 20px;
+  margin-top: 48px;
+  padding-top: 24px;
   font-size: 12px;
+  color: #64748B;
+  background: #0F172A;
+}
+.footer-bottom .container { display: block; }
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: #94A3B8;
+}
+.footer-meta a { color: #CBD5E1; text-decoration: none; }
+.footer-meta a:hover { color: #ff7f00; }
+.footer-meta .sep { color: #334155; }
+.footer-disclaimer {
+  margin: 16px auto 0;
+  max-width: 920px;
   text-align: center;
+  font-size: 11.5px;
+  line-height: 1.7;
   color: #64748B;
 }
 
@@ -1937,11 +2011,7 @@ details.faq p {
   .float-call .fc-num { font-size: 19px; }
 }
 
-/* Footer adds extra bottom padding so fixed CTA doesn't overlap content */
-body { padding-bottom: 110px; }
-@media (max-width: 720px) {
-  body { padding-bottom: 100px; }
-}
+/* Floating CTA sits over footer's bottom area — no body padding needed */
 
 /* Utility */
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -1949,9 +2019,12 @@ body { padding-bottom: 110px; }
 .mb-0 { margin-bottom: 0 !important; }
 
 /* Responsive */
+@media (max-width: 1100px) {
+  .site-footer .container { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
 @media (max-width: 960px) {
   .grid.cols-3, .grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
-  .site-footer .container { grid-template-columns: 1fr 1fr; }
   .safety .container { grid-template-columns: 1fr; }
 }
 
@@ -1986,7 +2059,9 @@ body { padding-bottom: 110px; }
   }
   .header-inner .cta-btn { display: none; }
   .grid.cols-2, .grid.cols-3, .grid.cols-4 { grid-template-columns: 1fr; }
-  .site-footer .container { grid-template-columns: 1fr; }
+  .site-footer .container { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .site-footer { padding-bottom: 130px; }
+  .footer-brand { grid-column: 1 / -1; }
   .hero { padding: 56px 0 40px; }
   .section { padding: 48px 0; }
 }
