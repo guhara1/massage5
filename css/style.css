@@ -741,8 +741,7 @@ img { max-width: 100%; display: block; }
   border-top-right-radius: 2px;
 }
 .directory-row,
-.directory-grid,
-.district-row {
+.directory-grid {
   display: grid;
   gap: 1px;
   background: var(--border);
@@ -750,19 +749,88 @@ img { max-width: 100%; display: block; }
   border-radius: 4px;
   overflow: hidden;
 }
-/* Compact district grid for region pages */
+
+/* === District directory (region/<province>/index.html) - upgraded card style === */
 .district-row {
-  grid-template-columns: repeat(8, 1fr);
-  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin-top: 22px;
 }
-@media (max-width: 1024px) {
-  .district-row { grid-template-columns: repeat(6, 1fr); }
+.district-row .dir-btn {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 14px;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -.3px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  line-height: 1.3;
 }
+.district-row .dir-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.district-row .dir-btn::after {
+  content: '→';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  opacity: 0;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+  transition: opacity .2s, transform .2s;
+}
+.district-row .dir-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -8px rgba(15, 118, 110, 0.25);
+  color: var(--primary);
+  background: linear-gradient(180deg, #fff 30%, var(--primary-soft) 100%);
+}
+.district-row .dir-btn:hover::before { transform: scaleX(1); }
+.district-row .dir-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
 @media (max-width: 720px) {
-  .district-row { grid-template-columns: repeat(4, 1fr); }
+  .district-row {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  .district-row .dir-btn {
+    padding: 16px 10px;
+    font-size: 14.5px;
+    border-radius: 12px;
+  }
+  .district-row .dir-btn::after { display: none; }
 }
 @media (max-width: 480px) {
-  .district-row { grid-template-columns: repeat(3, 1fr); }
+  .district-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .district-row .dir-btn {
+    padding: 14px 8px;
+    font-size: 13.5px;
+  }
 }
 .dir-btn {
   display: flex;
