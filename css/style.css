@@ -405,13 +405,28 @@ img { max-width: 100%; display: block; }
   border-top-right-radius: 2px;
 }
 .directory-row,
-.directory-grid {
+.directory-grid,
+.district-row {
   display: grid;
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
+}
+/* Compact district grid for region pages */
+.district-row {
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 18px;
+}
+@media (max-width: 1024px) {
+  .district-row { grid-template-columns: repeat(6, 1fr); }
+}
+@media (max-width: 720px) {
+  .district-row { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 480px) {
+  .district-row { grid-template-columns: repeat(3, 1fr); }
 }
 .dir-btn {
   display: flex;
