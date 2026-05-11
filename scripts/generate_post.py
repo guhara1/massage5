@@ -485,8 +485,57 @@ def update_magazine_index() -> None:
     else:
         grid_section = ""
 
+    # Coming Soon — show next 6 unused topics from queue
+    coming_section = ""
+    try:
+        queue = load_queue()
+        upcoming = [t for t in queue.get("topics", []) if not t.get("used")][:6]
+    except Exception:
+        upcoming = []
+    if upcoming:
+        def _cat(t):
+            if t.get("post_type") == "narrative":
+                return "지역 후기"
+            slug = t.get("slug", "")
+            if any(k in slug for k in ("swedish", "thai", "aroma", "lomi", "vs", "what-is", "hot-stone")):
+                return "코스 안내"
+            if any(k in slug for k in ("shoulder", "neck", "back", "calf", "workout", "pain")):
+                return "통증·회복"
+            if any(k in slug for k in ("overtime", "office", "sleep", "stress", "burnout", "autonomic")):
+                return "라이프스타일"
+            return "가이드"
+
+        def _desc(t):
+            sc = t.get("scenario") or t.get("search_intent") or ""
+            if len(sc) > 100:
+                sc = sc[:100] + "…"
+            return sc
+
+        coming_cards = "\n".join(
+            f'      <div class="post-card post-card--coming">\n'
+            f'        <span class="card-category">{esc(_cat(t))}</span>\n'
+            f'        <h3>{esc(t["title"])}</h3>\n'
+            f'        <p>{esc(_desc(t))}</p>\n'
+            f'        <div class="post-card__meta">발행 예정</div>\n'
+            f'      </div>'
+            for t in upcoming
+        )
+        coming_section = f'''
+<section class="section alt magazine-upcoming">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Coming Soon</span>
+      <h2>곧 업데이트될 글</h2>
+      <p>매주 월·수·금 오전에 새 글이 올라옵니다.</p>
+    </div>
+    <div class="post-grid">
+{coming_cards}
+    </div>
+  </div>
+</section>'''
+
     block = f'''{INDEX_MARK_START}
-{feat_html}{grid_section}
+{feat_html}{grid_section}{coming_section}
 {INDEX_MARK_END}'''
 
     html = MAGAZINE_INDEX.read_text(encoding="utf-8")
