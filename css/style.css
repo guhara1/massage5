@@ -285,6 +285,97 @@ img { max-width: 100%; display: block; }
 }
 .card .tag:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
 
+/* === Directory style (region + theme buttons) === */
+.directory { padding: 56px 0; background: var(--bg); }
+.directory-block { margin-bottom: 28px; }
+.directory-block:last-child { margin-bottom: 0; }
+.directory-title {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--text);
+  letter-spacing: -.3px;
+}
+.folder-icon {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: var(--primary);
+  border-radius: 2px;
+  position: relative;
+  flex-shrink: 0;
+}
+.folder-icon::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 7px;
+  height: 4px;
+  background: var(--primary);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.directory-row,
+.directory-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.directory-row {
+  grid-template-columns: repeat(8, 1fr);
+}
+.directory-grid {
+  grid-template-columns: repeat(8, 1fr);
+}
+.dir-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 8px;
+  background: #fff;
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 500;
+  transition: background .12s, color .12s;
+  min-height: 46px;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+.dir-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+.dir-btn.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+.dir-btn.active:hover {
+  background: var(--primary-hover);
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .directory-row { grid-template-columns: repeat(4, 1fr); }
+  .directory-grid { grid-template-columns: repeat(4, 1fr); }
+  .dir-btn { font-size: 13.5px; padding: 12px 6px; min-height: 44px; }
+}
+@media (max-width: 480px) {
+  .directory-row { grid-template-columns: repeat(4, 1fr); }
+  .directory-grid { grid-template-columns: repeat(3, 1fr); }
+  .dir-btn { font-size: 13px; padding: 11px 4px; min-height: 42px; }
+  .directory-title { font-size: 15px; }
+}
+
 /* === Region quick find (compact pills) === */
 .region-grid {
   display: grid;
