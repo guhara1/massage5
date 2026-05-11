@@ -730,17 +730,18 @@ img { max-width: 100%; display: block; }
 }
 .course-card {
   background: #fff;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border);
   border-radius: 16px;
   padding: 0;
   overflow: hidden;
   transition: transform .2s, box-shadow .2s, border-color .2s;
   position: relative;
+  box-shadow: 0 4px 14px -4px rgba(11, 18, 32, 0.12), 0 1px 3px rgba(11, 18, 32, 0.08);
 }
 .course-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 14px 32px -10px rgba(11, 95, 88, 0.28);
-  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(11, 95, 88, 0.35);
+  transform: translateY(-5px);
 }
 /* Color bar on top - different per course nth-child */
 .course-card::before {
@@ -836,16 +837,17 @@ img { max-width: 100%; display: block; }
 }
 .step-item {
   background: #fff;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border);
   border-radius: 14px;
   padding: 22px 20px 18px;
   position: relative;
   transition: border-color .2s, box-shadow .2s, transform .2s;
+  box-shadow: 0 3px 10px -3px rgba(11, 18, 32, 0.10), 0 1px 3px rgba(11, 18, 32, 0.06);
 }
 .step-item:hover {
   border-color: var(--primary);
-  box-shadow: 0 10px 24px -10px rgba(11, 95, 88, 0.25);
-  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -10px rgba(11, 95, 88, 0.32);
+  transform: translateY(-3px);
 }
 .step-item::before {
   counter-increment: step;
@@ -886,11 +888,12 @@ img { max-width: 100%; display: block; }
 }
 .audience-card {
   background: #fff;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border);
   border-radius: 14px;
   padding: 22px 22px;
   position: relative;
   transition: border-color .2s, box-shadow .2s, transform .2s;
+  box-shadow: 0 3px 10px -3px rgba(11, 18, 32, 0.10), 0 1px 3px rgba(11, 18, 32, 0.06);
 }
 .audience-card::before {
   content: '';
@@ -904,8 +907,8 @@ img { max-width: 100%; display: block; }
 }
 .audience-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 10px 24px -10px rgba(11, 95, 88, 0.25);
-  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -10px rgba(11, 95, 88, 0.32);
+  transform: translateY(-3px);
 }
 .audience-card h4 {
   margin: 0 0 10px;
@@ -932,18 +935,20 @@ img { max-width: 100%; display: block; }
 }
 .checklist li {
   background: #fff;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border);
   border-radius: 12px;
   padding: 16px 18px 16px 54px;
   font-size: 15px;
   color: var(--text-soft);
   position: relative;
   line-height: 1.65;
-  transition: border-color .2s, box-shadow .2s;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+  box-shadow: 0 2px 8px -2px rgba(11, 18, 32, 0.08);
 }
 .checklist li:hover {
   border-color: var(--primary);
-  box-shadow: 0 6px 16px -8px rgba(11, 95, 88, 0.2);
+  box-shadow: 0 10px 22px -8px rgba(11, 95, 88, 0.28);
+  transform: translateY(-2px);
 }
 .checklist li strong { color: var(--text); }
 .checklist li::before {
@@ -966,8 +971,16 @@ img { max-width: 100%; display: block; }
 
 /* === Article content - improved readability === */
 .article-wrap {
-  background: var(--bg);
+  background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
   padding: 56px 0 36px;
+  position: relative;
+}
+.article-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--border);
 }
 .article-content {
   max-width: 880px;
@@ -1461,11 +1474,12 @@ img { max-width: 100%; display: block; }
 /* FAQ - stronger contrast */
 details.faq {
   background: #fff;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border);
   border-radius: 12px;
   padding: 18px 22px;
   margin-bottom: 12px;
   transition: border-color .2s, box-shadow .2s;
+  box-shadow: 0 2px 8px -2px rgba(11, 18, 32, 0.08);
 }
 details.faq:hover { border-color: var(--primary); }
 details.faq[open] {
