@@ -650,6 +650,184 @@ img { max-width: 100%; display: block; }
   .mega-card { padding: 22px 20px; }
 }
 
+/* === Course pricing cards (district hub pages) === */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0 8px;
+}
+.course-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 18px;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.course-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px -10px rgba(15,118,110,0.2);
+  transform: translateY(-2px);
+}
+.course-card h3 {
+  font-size: 17px;
+  margin: 0 0 4px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -.3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.course-tag {
+  font-size: 11px;
+  background: var(--bg-alt);
+  color: var(--text-soft);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.course-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0 0 14px;
+  line-height: 1.6;
+  min-height: 44px;
+}
+.course-prices {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+}
+.course-prices li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+.course-prices li span { color: var(--muted); }
+.course-prices li strong { color: var(--text); font-weight: 800; font-size: 14.5px; }
+.price-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: var(--bg-alt);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+/* === Step process (이용 절차) === */
+.step-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+  counter-reset: step;
+}
+.step-item {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 18px 16px;
+  position: relative;
+}
+.step-item::before {
+  counter-increment: step;
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.step-item h4 {
+  margin: 0 0 6px;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: -.2px;
+}
+.step-item p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* === Target audience cards (어떤 분들이 찾을까?) === */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.audience-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px;
+}
+.audience-card h4 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -.2px;
+}
+.audience-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* === Checklist (예약 전 확인) === */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+.checklist li {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 14px 14px 44px;
+  font-size: 14.5px;
+  color: var(--text-soft);
+  position: relative;
+  line-height: 1.55;
+}
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+}
+
 /* === Article content (service detail pages) === */
 .article-wrap {
   background: var(--bg);
