@@ -234,6 +234,75 @@ def generate(topic: dict) -> dict:
     raise RuntimeError(f"품질 검증 실패: {last_err}")
 
 
+def build_jsonld(title: str, description: str, post_url: str, iso_date: str,
+                 body_chars: int, keywords: list) -> str:
+    """Build comprehensive @graph JSON-LD for magazine post."""
+    base = DOMAIN
+    graph = [
+        {
+            "@type": "Article",
+            "@id": f"{post_url}#article",
+            "headline": title,
+            "description": description,
+            "datePublished": iso_date,
+            "dateModified": iso_date,
+            "author": {"@id": f"{base}/#org"},
+            "publisher": {"@id": f"{base}/#org"},
+            "mainEntityOfPage": {"@id": post_url},
+            "inLanguage": "ko-KR",
+            "wordCount": body_chars,
+            "articleSection": "Magazine",
+            "keywords": keywords,
+            "image": f"{base}/favicon.svg",
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": f"{post_url}#breadcrumb",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "홈", "item": f"{base}/"},
+                {"@type": "ListItem", "position": 2, "name": "매거진", "item": f"{base}/magazine/"},
+                {"@type": "ListItem", "position": 3, "name": title, "item": post_url},
+            ],
+        },
+        {
+            "@type": "Organization",
+            "@id": f"{base}/#org",
+            "name": "간다GO",
+            "url": f"{base}/",
+            "logo": {"@type": "ImageObject", "url": f"{base}/favicon.svg"},
+            "sameAs": [
+                "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+                "https://medium.com/@88smartbro88",
+                "https://x.com/gugeulmake84173",
+            ],
+        },
+        {
+            "@type": "WebSite",
+            "@id": f"{base}/#website",
+            "url": f"{base}/",
+            "name": "간다GO",
+            "inLanguage": "ko-KR",
+            "publisher": {"@id": f"{base}/#org"},
+        },
+        {
+            "@type": "WebPage",
+            "@id": post_url,
+            "url": post_url,
+            "name": title,
+            "isPartOf": {"@id": f"{base}/#website"},
+            "breadcrumb": {"@id": f"{post_url}#breadcrumb"},
+            "primaryImageOfPage": {"@type": "ImageObject", "url": f"{base}/favicon.svg"},
+            "inLanguage": "ko-KR",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".article-content h2", ".article-content p"],
+            },
+        },
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graph},
+                      ensure_ascii=False, indent=2)
+
+
 def esc(s: str) -> str:
     return (
         s.replace("&", "&amp;")
@@ -262,21 +331,24 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     )
     related_label = topic.get("related_label", "지역별 이용 정보 기반")
 
-    jsonld = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": article["title"],
-        "description": article["description"],
-        "datePublished": iso,
-        "dateModified": iso,
-        "author": {"@type": "Organization", "name": "간다GO"},
-        "publisher": {
-            "@type": "Organization",
-            "name": "간다GO",
-            "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/favicon.svg"},
-        },
-        "mainEntityOfPage": {"@type": "WebPage", "@id": post_url},
-    }
+    # Build keywords from topic context
+    keywords = ["출장마사지", "간다GO 매거진"]
+    if topic.get("district_name"):
+        keywords.append(topic["district_name"])
+    if topic.get("post_type") == "narrative":
+        keywords.append("지역 후기")
+    else:
+        keywords.append("이용 가이드")
+
+    body_chars = sum(len(article[f"p_{i}"]) for i in range(1, 6))
+    jsonld_str = build_jsonld(
+        title=article["title"],
+        description=article["description"],
+        post_url=post_url,
+        iso_date=iso,
+        body_chars=body_chars,
+        keywords=keywords,
+    )
 
     return f'''<!doctype html>
 <html lang="ko">
@@ -412,7 +484,7 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
 <script src="../../js/main.js"></script>
 
 <script type="application/ld+json">
-{json.dumps(jsonld, ensure_ascii=False, indent=2)}
+{jsonld_str}
 </script>
 </body></html>
 '''
