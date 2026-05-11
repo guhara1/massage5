@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "comment": "v2: 60% 지역 후크형(narrative) + 40% 가이드형(guide). 토픽별 post_type 기준으로 프롬프트 분기.",
+  "version": 3,
+  "comment": "v3: 출장마사지 30(60%) + 마사지 코스/통증 가이드 20(25%) + 건강·라이프스타일 30(38%). 토픽 카테고리 다양화로 토픽 클러스터 확장.",
   "topics": [
     {
       "slug": "first-time-outcall-five-tips",
@@ -126,6 +126,68 @@
       "used": false
     },
     {
+      "slug": "stubborn-shoulder-tightness",
+      "post_type": "guide",
+      "title": "어깨 결림이 도무지 안 풀릴 때",
+      "search_intent": "만성 어깨 결림이 풀리지 않는 원인과 마사지·생활 습관으로 풀어내는 방법",
+      "region_hint": "",
+      "related_label": "통증 부위 관련 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "overtime-worker-recovery",
+      "post_type": "guide",
+      "title": "야근이 잦은 직장인의 회복 루틴",
+      "search_intent": "야근이 일상인 직장인이 컨디션을 유지하기 위해 챙겨야 할 회복 루틴",
+      "region_hint": "서울 강남, 영등포",
+      "related_label": "직장인 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "24시간 출장, 심야 시간대의 안전한 선택",
+          "href": "../../services/24hr.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "samseong-coex-business",
       "post_type": "narrative",
       "title": "코엑스 호텔에서 받은 삼성동 출장마사지 후기",
@@ -163,6 +225,68 @@
       "used": false
     },
     {
+      "slug": "swedish-vs-aroma",
+      "post_type": "guide",
+      "title": "스웨디시와 아로마, 결국 뭐가 다른 걸까",
+      "search_intent": "스웨디시와 아로마마사지의 진짜 차이, 어떤 사람에게 어느 쪽이 더 맞는지",
+      "region_hint": "",
+      "related_label": "코스별 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "신사동 출장마사지, 가로수길의 늦은 저녁",
+          "href": "../../region/seoul/gangnam/sinsa.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "한남동 출장마사지, 외국계 거주민의 차분한 권역",
+          "href": "../../region/seoul/yongsan/hannam.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "therapist-strength-adjustment",
+      "post_type": "guide",
+      "title": "10년 경력 관리사가 알려주는 강도 조절의 진실",
+      "search_intent": "마사지 강도(약·중·강)를 어떻게 요청해야 만족도가 올라가는지, 현장에서 흔히 일어나는 미스커뮤니케이션",
+      "region_hint": "",
+      "related_label": "강도 선호 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
+          "href": "../../region/seoul/jungnang/myeonmok.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "구의동 출장마사지, 대학가 새벽의 다른 표정",
+          "href": "../../region/seoul/gwangjin/guui.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "apgujeong-hangang",
       "post_type": "narrative",
       "title": "압구정 출장마사지를 정기로 받는 이유",
@@ -191,6 +315,72 @@
         {
           "text": "여성전용 출장, 안심 이용을 위한 가이드",
           "href": "../../services/women.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "hotel-room-outcall-policy",
+      "post_type": "guide",
+      "title": "호텔 객실 출장, 호텔별로 다른 작은 차이들",
+      "search_intent": "호텔에서 출장마사지를 받을 때 호텔 정책·층수·출입 절차가 어떻게 다른지 궁금함",
+      "region_hint": "서울 중구, 강남",
+      "related_label": "주요 호텔 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "명동 출장마사지, 호텔 투숙객의 늦은 저녁",
+          "href": "../../region/seoul/jung/index.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "이태원 출장마사지, 호텔 객실의 작은 차이",
+          "href": "../../region/seoul/yongsan/itaewon.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
+          "href": "../../region/busan/haeundae/index.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "post-workout-massage-timing",
+      "post_type": "guide",
+      "title": "운동 후 근육통, 마사지 받는 타이밍",
+      "search_intent": "운동 직후·다음 날·며칠 뒤 중 마사지가 가장 효과적인 시점은 언제인지",
+      "region_hint": "",
+      "related_label": "운동·회복 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "성수동 출장마사지, 카페·공방 거리의 회복",
+          "href": "../../region/seoul/seongdong/seongsu.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "망원동 출장마사지, 한강공원 권역의 분위기",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
         }
       ],
       "used": false
@@ -233,6 +423,64 @@
       "used": false
     },
     {
+      "slug": "tech-neck-headache",
+      "post_type": "guide",
+      "title": "거북목 때문에 두통이 온다면",
+      "search_intent": "거북목 자세에서 시작되는 긴장성 두통의 원인과 마사지로 풀어내는 접근",
+      "region_hint": "",
+      "related_label": "사무·자세 관련 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "광화문 출장마사지, 관공서·기업 권역의 짧은 회복",
+          "href": "../../region/seoul/jongno/index.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "business-traveler-condition",
+      "post_type": "guide",
+      "title": "출장 잦은 직장인의 컨디션 관리법",
+      "search_intent": "잦은 출장으로 누적되는 피로를 관리하는 일상 루틴",
+      "region_hint": "전국",
+      "related_label": "출장 직장인 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "코엑스 호텔에서 받은 삼성동 출장마사지 후기",
+          "href": "../../region/seoul/gangnam/samseong.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "송도 비즈니스호텔 출장마사지, 외국인 동료의 후기",
+          "href": "../../region/incheon/yeonsu/index.html"
+        },
+        {
+          "text": "해운대 1박 첫날, 호텔 출장마사지로 시작한 여행",
+          "href": "../../region/busan/haeundae/index.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "cheongdam-luxury-block",
       "post_type": "narrative",
       "title": "청담동의 차분한 그 밤, 마사지로 마무리한 이야기",
@@ -261,6 +509,68 @@
         {
           "text": "1인샵·2인샵, 프라이빗 권역의 차분함",
           "href": "../../services/one-person.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "thai-massage-why-refreshing",
+      "post_type": "guide",
+      "title": "타이마사지가 시원하다고 하는 이유",
+      "search_intent": "타이마사지가 왜 깊은 시원함을 준다고 하는지, 어떤 사람에게 잘 맞는지",
+      "region_hint": "",
+      "related_label": "강도 선호 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "구의동 출장마사지, 대학가 새벽의 다른 표정",
+          "href": "../../region/seoul/gwangjin/guui.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "trouble-sleeping-autonomic",
+      "post_type": "guide",
+      "title": "잠들기 어려운 밤, 자율신경 안정시키기",
+      "search_intent": "잠에 들기 어려운 밤에 자율신경을 진정시키는 호흡·아로마·환경 만들기",
+      "region_hint": "",
+      "related_label": "수면·휴식 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "한남동 출장마사지, 외국계 거주민의 차분한 권역",
+          "href": "../../region/seoul/yongsan/hannam.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "연남동 출장마사지, 카페 골목의 차분한 회복",
+          "href": "../../region/seoul/mapo/yeonnam.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
         }
       ],
       "used": false
@@ -303,6 +613,72 @@
       "used": false
     },
     {
+      "slug": "why-outcall-price-differs",
+      "post_type": "guide",
+      "title": "출장마사지 가격이 권역마다 다른 이유",
+      "search_intent": "출장마사지 가격이 지역마다 왜 다른지, 어떤 요소가 가격에 들어가는지 알고 싶음",
+      "region_hint": "서울, 경기, 부산",
+      "related_label": "전국 권역별 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "분당 출장마사지, 신도시 평일 저녁의 안정감",
+          "href": "../../region/gyeonggi/seongnam/bundang-gu/index.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
+          "href": "../../region/busan/haeundae/index.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "전국 권역별 안내",
+          "href": "../../region/index.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "running-recovery-massage-timing",
+      "post_type": "guide",
+      "title": "러닝 후 회복 루틴, 마사지 끼우는 타이밍",
+      "search_intent": "러닝 직후·다음 날 회복을 위한 마사지·스트레칭의 적절한 타이밍",
+      "region_hint": "",
+      "related_label": "러닝 회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "한강 라이딩 후, 망원에서 받은 다리 케어",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "dogok-tower-palace",
       "post_type": "narrative",
       "title": "도곡 타워 단지에서 출장마사지 받기 전 알아둘 것",
@@ -331,6 +707,68 @@
         {
           "text": "아로마테라피, 향과 함께하는 깊은 이완",
           "href": "../../services/aroma.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "lower-back-after-overtime",
+      "post_type": "guide",
+      "title": "야근 후 허리 통증, 마사지로 풀 수 있을까",
+      "search_intent": "야근으로 누적된 허리 통증을 마사지가 어떻게 도와주는지, 자가 관리는 어떻게 같이 해야 하는지",
+      "region_hint": "서울 영등포, 강남",
+      "related_label": "직장인 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "영등포구 전체 권역 안내",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "overtime-thirty-minute-recovery",
+      "post_type": "guide",
+      "title": "야근 후 30분이면 끝내는 회복 루틴",
+      "search_intent": "야근 후 잠들기 전 30분 동안 빠르게 컨디션을 회복하는 루틴",
+      "region_hint": "",
+      "related_label": "야근 회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "여의도 야근 후 받는 출장마사지의 한 패턴",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "24시간 출장, 심야 시간대의 안전한 선택",
+          "href": "../../services/24hr.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
         }
       ],
       "used": false
@@ -373,6 +811,68 @@
       "used": false
     },
     {
+      "slug": "what-is-lomi-lomi",
+      "post_type": "guide",
+      "title": "로미로미를 처음 들어본 분들에게",
+      "search_intent": "로미로미가 어떤 마사지인지, 어떤 분위기와 효과를 기대할 수 있는지",
+      "region_hint": "제주, 부산",
+      "related_label": "휴양·코스 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "청담동 출장마사지, 명품 거리의 차분한 공간",
+          "href": "../../region/seoul/gangnam/cheongdam.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
+        },
+        {
+          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
+          "href": "../../region/busan/haeundae/index.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "제주 권역 안내",
+          "href": "../../region/jeju/index.html"
+        },
+        {
+          "text": "커플 마사지, 동시 진행 코스의 흐름",
+          "href": "../../services/couple.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "chronic-fatigue-first-step",
+      "post_type": "guide",
+      "title": "만성 피로에서 벗어나는 첫 발걸음",
+      "search_intent": "만성 피로의 원인과 회복을 위한 실질적인 첫 단계",
+      "region_hint": "",
+      "related_label": "회복·휴식 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "여의도 야근 후 받는 출장마사지의 한 패턴",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "songpa-jamsil-family",
       "post_type": "narrative",
       "title": "잠실에서 가족이 함께 받은 90분, 어땠을까",
@@ -401,6 +901,68 @@
         {
           "text": "아로마테라피, 향과 함께하는 깊은 이완",
           "href": "../../services/aroma.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "late-night-outcall-safety",
+      "post_type": "guide",
+      "title": "심야 출장마사지를 안전하게 받는 방법",
+      "search_intent": "새벽 시간대에 출장마사지를 받고 싶은데 안전한지, 어떻게 준비해야 하는지",
+      "region_hint": "서울 강남, 마포",
+      "related_label": "심야 가능 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "24시간 출장, 심야 시간대의 안전한 선택",
+          "href": "../../services/24hr.html"
+        },
+        {
+          "text": "상수동 출장마사지, 홍대 인근의 늦은 밤 회복",
+          "href": "../../region/seoul/mapo/sangsu.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "건대 출장마사지, 대학가 새벽의 다른 표정",
+          "href": "../../region/seoul/gwangjin/guui.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "post-gym-soreness-five-tips",
+      "post_type": "guide",
+      "title": "헬스 다음 날 뻐근함을 줄이는 다섯 가지",
+      "search_intent": "고강도 헬스 후 다음 날 근육통(DOMS)을 줄이는 회복 방법",
+      "region_hint": "",
+      "related_label": "헬스 회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "건대 새벽 한 시, 마사지 부른 30대의 솔직한 일기",
+          "href": "../../region/seoul/gwangjin/guui.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
         }
       ],
       "used": false
@@ -438,6 +1000,64 @@
         {
           "text": "로미로미, 하와이 전통 리듬의 이완",
           "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "calf-swelling-care",
+      "post_type": "guide",
+      "title": "종아리 부종이 심한 분께 추천하는 관리",
+      "search_intent": "종아리 부종의 원인과 마사지·생활 습관으로 줄이는 방법",
+      "region_hint": "",
+      "related_label": "여성·홈케어 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "압구정동 출장마사지, 한강변 고급 주거의 분위기",
+          "href": "../../region/seoul/gangnam/apgujeong.html"
+        },
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "대치동 출장마사지, 학원가 부모의 짧은 회복",
+          "href": "../../region/seoul/gangnam/daechi.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "lunch-break-recovery-tips",
+      "post_type": "guide",
+      "title": "점심시간을 회복 시간으로 바꾸는 작은 방법",
+      "search_intent": "점심시간 1시간을 컨디션 회복·자세 교정에 활용하는 방법",
+      "region_hint": "서울 강남, 광화문",
+      "related_label": "점심시간 활용 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "광화문 점심시간에 마사지 받는 게 가능할까",
+          "href": "../../region/seoul/jongno/index.html"
+        },
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
         }
       ],
       "used": false
@@ -484,6 +1104,72 @@
       "used": false
     },
     {
+      "slug": "two-hours-before-bed",
+      "post_type": "guide",
+      "title": "잠들기 전 2시간이 다음 날을 결정한다",
+      "search_intent": "수면의 질을 높이는 잠들기 전 2시간 루틴",
+      "region_hint": "",
+      "related_label": "수면 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "연남 카페 골목 살던 프리랜서의 평일 낮 마사지",
+          "href": "../../region/seoul/mapo/yeonnam.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "five-questions-before-booking",
+      "post_type": "guide",
+      "title": "예약 전 꼭 물어봐야 할 다섯 가지",
+      "search_intent": "출장마사지 예약 전화·문자에서 어떤 항목을 사전에 확인해야 분쟁을 예방할 수 있는지",
+      "region_hint": "전국",
+      "related_label": "전국 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "송도 출장마사지, 국제업무지구의 야간 풍경",
+          "href": "../../region/incheon/yeonsu/index.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "안전 이용 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "전국 지역 보기",
+          "href": "../../region/index.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "sangsu-hongdae-night",
       "post_type": "narrative",
       "title": "홍대 새벽 두 시, 상수동에서 받은 60분 회복",
@@ -516,6 +1202,64 @@
         {
           "text": "타이 마사지, 깊은 압을 원하는 분께",
           "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "cycling-leg-care",
+      "post_type": "guide",
+      "title": "사이클·자전거 후 다리 케어, 어디까지 신경 써야 할까",
+      "search_intent": "장거리 사이클·라이딩 후 다리·종아리 회복 관리",
+      "region_hint": "서울 망원, 한강",
+      "related_label": "사이클·라이딩 회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "한강 라이딩 후, 망원에서 받은 다리 케어",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "shoulder-self-stretching-five-steps",
+      "post_type": "guide",
+      "title": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+      "search_intent": "퇴근 후 집에서 따라할 수 있는 어깨 결림 셀프 스트레칭이 궁금함",
+      "region_hint": "",
+      "related_label": "근육 회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "광화문 점심시간에 마사지 받는 게 가능할까",
+          "href": "../../region/seoul/jongno/index.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
         }
       ],
       "used": false
@@ -558,6 +1302,60 @@
       "used": false
     },
     {
+      "slug": "wfh-one-year-posture",
+      "post_type": "guide",
+      "title": "재택근무 1년 차, 자세가 망가지지 않으려면",
+      "search_intent": "재택근무 환경에서 자세·근육 건강을 유지하는 일상 습관",
+      "region_hint": "",
+      "related_label": "재택근무 자세 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "성수 작업실에서 일하다 부른 마사지, 90분의 변화",
+          "href": "../../region/seoul/seongdong/seongsu.html"
+        },
+        {
+          "text": "연남 카페 골목 살던 프리랜서의 평일 낮 마사지",
+          "href": "../../region/seoul/mapo/yeonnam.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "burnout-seven-signals",
+      "post_type": "guide",
+      "title": "번아웃 초기 신호 일곱 가지",
+      "search_intent": "번아웃 초기 단계의 신체적·정신적 신호와 대응",
+      "region_hint": "",
+      "related_label": "번아웃·회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "면목동에서 '진짜 힘들다' 말해본 날",
+          "href": "../../region/seoul/jungnang/myeonmok.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "yeonnam-cafe-street",
       "post_type": "narrative",
       "title": "연남 카페 골목 살던 프리랜서의 평일 낮 마사지",
@@ -590,6 +1388,68 @@
         {
           "text": "1인샵·2인샵, 프라이빗 권역의 차분함",
           "href": "../../services/one-person.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "home-outcall-setup",
+      "post_type": "guide",
+      "title": "자택 출장마사지, 받기 좋은 환경 만들기",
+      "search_intent": "자택에서 출장마사지를 받을 때 공간·소음·향 같은 환경을 어떻게 준비하면 좋은지",
+      "region_hint": "경기 분당, 일산",
+      "related_label": "신도시 권역 이용 정보 기반",
+      "related_links": [
+        {
+          "text": "분당 출장마사지, 신도시 평일 저녁의 안정감",
+          "href": "../../region/gyeonggi/seongnam/bundang-gu/index.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "일산 출장마사지, 신도시 가족의 주말 저녁",
+          "href": "../../region/gyeonggi/goyang/index.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "도곡동 출장마사지, 타워팰리스 권역의 흐름",
+          "href": "../../region/seoul/gangnam/dogok.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "tech-neck-one-minute-correction",
+      "post_type": "guide",
+      "title": "거북목, 매일 1분이면 바뀌는 것들",
+      "search_intent": "거북목 자세 교정을 위해 매일 짧은 시간 안에 할 수 있는 운동·습관",
+      "region_hint": "",
+      "related_label": "자세 교정 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "여의도 야근 후 받는 출장마사지의 한 패턴",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
         }
       ],
       "used": false
@@ -632,6 +1492,60 @@
       "used": false
     },
     {
+      "slug": "office-five-minute-stretches",
+      "post_type": "guide",
+      "title": "사무실에서 할 수 있는 5분 스트레칭",
+      "search_intent": "사무실 책상 앞에서 짧게 할 수 있는 스트레칭 루틴",
+      "region_hint": "",
+      "related_label": "사무실 건강 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+          "href": "shoulder-self-stretching-five-steps.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "autonomic-nervous-breathing",
+      "post_type": "guide",
+      "title": "자율신경을 안정시키는 4-7-8 호흡법",
+      "search_intent": "긴장·불안 상황에서 자율신경을 진정시키는 호흡 기법",
+      "region_hint": "",
+      "related_label": "자율신경·이완 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
+        },
+        {
+          "text": "한남동에서 외국인 친구와 같이 받은 마사지",
+          "href": "../../region/seoul/yongsan/hannam.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "hannam-foreigner-block",
       "post_type": "narrative",
       "title": "한남동에서 외국인 친구와 같이 받은 마사지",
@@ -664,6 +1578,64 @@
         {
           "text": "로미로미, 하와이 전통 리듬의 이완",
           "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "next-day-fatigue-after-massage",
+      "post_type": "guide",
+      "title": "마사지 받고 다음 날 더 피곤한 이유",
+      "search_intent": "마사지 후에 오히려 피곤하거나 몸살처럼 느껴지는 이유와 대응 방법",
+      "region_hint": "",
+      "related_label": "회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
+          "href": "../../region/seoul/jungnang/myeonmok.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "이용 후기 모음",
+          "href": "../../reviews/index.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "tension-headache-from-posture",
+      "post_type": "guide",
+      "title": "두통의 원인이 자세일 수도 있다",
+      "search_intent": "긴장성 두통의 원인과 자세·근육 긴장이 두통에 미치는 영향",
+      "region_hint": "",
+      "related_label": "두통·자세 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+          "href": "shoulder-self-stretching-five-steps.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
         }
       ],
       "used": false
@@ -710,6 +1682,60 @@
       "used": false
     },
     {
+      "slug": "hotel-stay-condition-care",
+      "post_type": "guide",
+      "title": "출장지 호텔에서 컨디션 챙기는 작은 디테일",
+      "search_intent": "출장 호텔 투숙 중 컨디션을 유지하는 작은 습관과 루틴",
+      "region_hint": "서울 중구, 부산",
+      "related_label": "호텔 투숙 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "명동 5성급 호텔, 객실 마사지 받기 전 체크리스트",
+          "href": "../../region/seoul/jung/index.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "해운대 1박 첫날, 호텔 출장마사지로 시작한 여행",
+          "href": "../../region/busan/haeundae/index.html"
+        },
+        {
+          "text": "이태원 호텔 출장마사지에서 마주친 작은 차이들",
+          "href": "../../region/seoul/yongsan/itaewon.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "rituals-of-sleepless-night",
+      "post_type": "guide",
+      "title": "잠 못 드는 밤의 작은 의식들",
+      "search_intent": "불면증에 도움이 되는 잠들기 전 작은 의식·루틴",
+      "region_hint": "",
+      "related_label": "불면·수면 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "한남동에서 외국인 친구와 같이 받은 마사지",
+          "href": "../../region/seoul/yongsan/hannam.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "myeonmok-honest-day",
       "post_type": "narrative",
       "title": "면목동에서 '진짜 힘들다' 말해본 날",
@@ -738,6 +1764,68 @@
         {
           "text": "중랑구 전체 권역 안내",
           "href": "../../region/seoul/jungnang/index.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "couple-outcall-difference",
+      "post_type": "guide",
+      "title": "커플로 받는 출장마사지, 어떤 점이 다를까",
+      "search_intent": "연인·부부가 함께 받는 커플 마사지의 진행 방식, 비용, 예약 시 확인 사항",
+      "region_hint": "제주, 부산 해운대",
+      "related_label": "커플 이용 권역 정보 기반",
+      "related_links": [
+        {
+          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
+          "href": "../../region/busan/haeundae/index.html"
+        },
+        {
+          "text": "커플 마사지, 동시 진행 코스의 흐름",
+          "href": "../../services/couple.html"
+        },
+        {
+          "text": "일산 출장마사지, 신도시 가족의 주말 저녁",
+          "href": "../../region/gyeonggi/goyang/index.html"
+        },
+        {
+          "text": "로미로미, 하와이 전통 리듬의 이완",
+          "href": "../../services/lomi.html"
+        },
+        {
+          "text": "제주 권역 안내",
+          "href": "../../region/jeju/index.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "lymphatic-circulation-swelling",
+      "post_type": "guide",
+      "title": "림프 순환이 막혔다는 신호들",
+      "search_intent": "림프 순환 저하 증상과 부종·붓기 관리법",
+      "region_hint": "",
+      "related_label": "순환·부종 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "압구정 출장마사지를 정기로 받는 이유",
+          "href": "../../region/seoul/gangnam/apgujeong.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
         },
         {
           "text": "홈케어 출장, 자택 방문형의 작은 차이",
@@ -784,6 +1872,60 @@
       "used": false
     },
     {
+      "slug": "eight-hours-at-monitor",
+      "post_type": "guide",
+      "title": "모니터 앞 8시간, 몸은 어떻게 변하나",
+      "search_intent": "장시간 모니터 작업이 신체에 누적시키는 변화와 대응",
+      "region_hint": "",
+      "related_label": "사무직 건강 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "거북목, 매일 1분이면 바뀌는 것들",
+          "href": "tech-neck-one-minute-correction.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "stress-eating-body-signal",
+      "post_type": "guide",
+      "title": "스트레스성 식욕, 몸은 무엇을 원하는 걸까",
+      "search_intent": "스트레스로 인한 식욕 변화와 몸이 보내는 신호의 의미",
+      "region_hint": "",
+      "related_label": "스트레스·건강 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "번아웃 초기 신호 일곱 가지",
+          "href": "burnout-seven-signals.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "konkuk-univ-area",
       "post_type": "narrative",
       "title": "건대 새벽 한 시, 마사지 부른 30대의 솔직한 일기",
@@ -821,6 +1963,72 @@
       "used": false
     },
     {
+      "slug": "outcall-review-real-vs-fake",
+      "post_type": "guide",
+      "title": "출장마사지 후기, 진짜와 가짜를 가려내는 법",
+      "search_intent": "출장마사지 업체 후기를 볼 때 신뢰할 수 있는 후기와 광고성 후기를 구분하는 기준",
+      "region_hint": "",
+      "related_label": "이용자 후기 정보 기반",
+      "related_links": [
+        {
+          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
+          "href": "../../region/seoul/jungnang/myeonmok.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "망우동 출장마사지, 의외로 조용한 위로",
+          "href": "../../region/seoul/jungnang/manggu.html"
+        },
+        {
+          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
+          "href": "../../services/hotel.html"
+        },
+        {
+          "text": "실이용 후기 보기",
+          "href": "../../reviews/index.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "안전 이용 가이드",
+          "href": "../../support/index.html#safety"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "wrist-tunnel-prevention",
+      "post_type": "guide",
+      "title": "손목 터널 증후군, 모니터 앞 사람이 알아야 할 것",
+      "search_intent": "사무직·프로그래머에게 흔한 손목 터널 증후군의 초기 신호와 예방법",
+      "region_hint": "",
+      "related_label": "사무직 건강 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "성수 작업실에서 일하다 부른 마사지, 90분의 변화",
+          "href": "../../region/seoul/seongdong/seongsu.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "seongsu-cafe-craft",
       "post_type": "narrative",
       "title": "성수 작업실에서 일하다 부른 마사지, 90분의 변화",
@@ -853,6 +2061,60 @@
         {
           "text": "로미로미, 하와이 전통 리듬의 이완",
           "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "pelvic-balance-self-check",
+      "post_type": "guide",
+      "title": "골반이 틀어졌는지 셀프로 체크하는 법",
+      "search_intent": "골반 비대칭·틀어짐 자가 진단과 대응 방법",
+      "region_hint": "",
+      "related_label": "자세·균형 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "도곡 타워 단지에서 출장마사지 받기 전 알아둘 것",
+          "href": "../../region/seoul/gangnam/dogok.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "calf-swelling-signals",
+      "post_type": "guide",
+      "title": "종아리 부종이 보내는 작은 신호들",
+      "search_intent": "종아리 부종이 의미할 수 있는 건강 신호와 관리 방법",
+      "region_hint": "",
+      "related_label": "다리·순환 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "한강 라이딩 후, 망원에서 받은 다리 케어",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "홈케어 출장, 자택 방문형의 작은 차이",
+          "href": "../../services/homecare.html"
+        },
+        {
+          "text": "여성전용 출장, 안심 이용을 위한 가이드",
+          "href": "../../services/women.html"
         }
       ],
       "used": false
@@ -899,6 +2161,60 @@
       "used": false
     },
     {
+      "slug": "myofascial-release-meaning",
+      "post_type": "guide",
+      "title": "근막 이완이라는 말, 정확히 무슨 뜻일까",
+      "search_intent": "근막 이완(myofascial release)의 의미와 마사지·운동에서의 역할",
+      "region_hint": "",
+      "related_label": "근육·근막 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "massage-vs-exercise-recovery",
+      "post_type": "guide",
+      "title": "회복에는 마사지가 먼저일까, 운동이 먼저일까",
+      "search_intent": "근육 피로 회복을 위해 마사지와 운동(스트레칭) 중 어떤 게 더 효과적인지",
+      "region_hint": "",
+      "related_label": "회복·운동 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "한강 라이딩 후, 망원에서 받은 다리 케어",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "myeongdong-hotel-tourist",
       "post_type": "narrative",
       "title": "명동 5성급 호텔, 객실 마사지 받기 전 체크리스트",
@@ -931,6 +2247,60 @@
         {
           "text": "로미로미, 하와이 전통 리듬의 이완",
           "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "office-five-years-back-checklist",
+      "post_type": "guide",
+      "title": "사무직 5년 차의 허리 건강 체크리스트",
+      "search_intent": "사무직 장기 근무자의 허리 건강 점검 항목과 일상 관리 방법",
+      "region_hint": "서울 강남, 영등포",
+      "related_label": "직장인 건강 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "여의도 야근 후 받는 출장마사지의 한 패턴",
+          "href": "../../region/seoul/yeongdeungpo/index.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "stress-accumulates-in-shoulders",
+      "post_type": "guide",
+      "title": "만성 스트레스가 어깨에 쌓이는 이유",
+      "search_intent": "스트레스가 신체에 누적되는 메커니즘과 어깨·목 긴장의 관계",
+      "region_hint": "",
+      "related_label": "스트레스·신체 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+          "href": "shoulder-self-stretching-five-steps.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "아로마테라피, 향과 함께하는 깊은 이완",
+          "href": "../../services/aroma.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
         }
       ],
       "used": false
@@ -973,6 +2343,60 @@
       "used": false
     },
     {
+      "slug": "hiking-knee-calf-care",
+      "post_type": "guide",
+      "title": "등산 후 무릎과 종아리, 그날 안에 챙기면 다른 것",
+      "search_intent": "등산 직후 무릎·종아리 회복을 위한 케어 방법",
+      "region_hint": "",
+      "related_label": "등산·회복 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "발 마사지, 부종·피로 부위형 케어",
+          "href": "../../services/foot.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "한강 라이딩 후, 망원에서 받은 다리 케어",
+          "href": "../../region/seoul/mapo/mangwon.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "same-shoulder-pain-daily",
+      "post_type": "guide",
+      "title": "매일 같은 쪽 어깨가 결리는 진짜 이유",
+      "search_intent": "한쪽 어깨만 만성적으로 결리는 원인과 대응 방법",
+      "region_hint": "",
+      "related_label": "자세·근육 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+          "href": "shoulder-self-stretching-five-steps.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
+        },
+        {
+          "text": "스포츠 마사지, 운동 후 근육 회복",
+          "href": "../../services/sports.html"
+        },
+        {
+          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
+          "href": "../../region/seoul/gangnam/yeoksam.html"
+        }
+      ],
+      "used": false
+    },
+    {
       "slug": "haeundae-beach-trip",
       "post_type": "narrative",
       "title": "해운대 1박 첫날, 호텔 출장마사지로 시작한 여행",
@@ -1005,6 +2429,33 @@
         {
           "text": "로미로미, 하와이 전통 리듬의 이완",
           "href": "../../services/lomi.html"
+        }
+      ],
+      "used": false
+    },
+    {
+      "slug": "smartphone-posture-pain",
+      "post_type": "guide",
+      "title": "휴대폰 보는 자세가 만드는 작은 통증들",
+      "search_intent": "휴대폰 사용 자세에서 누적되는 목·어깨·손가락 통증과 예방법",
+      "region_hint": "",
+      "related_label": "자세·습관 관련 정보 기반",
+      "related_links": [
+        {
+          "text": "거북목, 매일 1분이면 바뀌는 것들",
+          "href": "tech-neck-one-minute-correction.html"
+        },
+        {
+          "text": "어깨 결림 풀어주는 셀프 스트레칭 다섯 단계",
+          "href": "shoulder-self-stretching-five-steps.html"
+        },
+        {
+          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
+          "href": "../../services/swedish.html"
+        },
+        {
+          "text": "타이 마사지, 깊은 압을 원하는 분께",
+          "href": "../../services/thai.html"
         }
       ],
       "used": false
@@ -1153,643 +2604,6 @@
         {
           "text": "아로마테라피, 향과 함께하는 깊은 이완",
           "href": "../../services/aroma.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "hotel-room-outcall-policy",
-      "post_type": "guide",
-      "title": "호텔 객실 출장, 호텔별로 다른 작은 차이들",
-      "search_intent": "호텔에서 출장마사지를 받을 때 호텔 정책·층수·출입 절차가 어떻게 다른지 궁금함",
-      "region_hint": "서울 중구, 강남",
-      "related_label": "주요 호텔 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "명동 출장마사지, 호텔 투숙객의 늦은 저녁",
-          "href": "../../region/seoul/jung/index.html"
-        },
-        {
-          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
-          "href": "../../services/hotel.html"
-        },
-        {
-          "text": "이태원 출장마사지, 호텔 객실의 작은 차이",
-          "href": "../../region/seoul/yongsan/itaewon.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
-          "href": "../../region/busan/haeundae/index.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "why-outcall-price-differs",
-      "post_type": "guide",
-      "title": "출장마사지 가격이 권역마다 다른 이유",
-      "search_intent": "출장마사지 가격이 지역마다 왜 다른지, 어떤 요소가 가격에 들어가는지 알고 싶음",
-      "region_hint": "서울, 경기, 부산",
-      "related_label": "전국 권역별 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "분당 출장마사지, 신도시 평일 저녁의 안정감",
-          "href": "../../region/gyeonggi/seongnam/bundang-gu/index.html"
-        },
-        {
-          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
-          "href": "../../services/hotel.html"
-        },
-        {
-          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
-          "href": "../../region/busan/haeundae/index.html"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "전국 권역별 안내",
-          "href": "../../region/index.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "late-night-outcall-safety",
-      "post_type": "guide",
-      "title": "심야 출장마사지를 안전하게 받는 방법",
-      "search_intent": "새벽 시간대에 출장마사지를 받고 싶은데 안전한지, 어떻게 준비해야 하는지",
-      "region_hint": "서울 강남, 마포",
-      "related_label": "심야 가능 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "24시간 출장, 심야 시간대의 안전한 선택",
-          "href": "../../services/24hr.html"
-        },
-        {
-          "text": "상수동 출장마사지, 홍대 인근의 늦은 밤 회복",
-          "href": "../../region/seoul/mapo/sangsu.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "건대 출장마사지, 대학가 새벽의 다른 표정",
-          "href": "../../region/seoul/gwangjin/guui.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "five-questions-before-booking",
-      "post_type": "guide",
-      "title": "예약 전 꼭 물어봐야 할 다섯 가지",
-      "search_intent": "출장마사지 예약 전화·문자에서 어떤 항목을 사전에 확인해야 분쟁을 예방할 수 있는지",
-      "region_hint": "전국",
-      "related_label": "전국 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "송도 출장마사지, 국제업무지구의 야간 풍경",
-          "href": "../../region/incheon/yeonsu/index.html"
-        },
-        {
-          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
-          "href": "../../services/hotel.html"
-        },
-        {
-          "text": "안전 이용 가이드",
-          "href": "../../support/index.html#safety"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "전국 지역 보기",
-          "href": "../../region/index.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "home-outcall-setup",
-      "post_type": "guide",
-      "title": "자택 출장마사지, 받기 좋은 환경 만들기",
-      "search_intent": "자택에서 출장마사지를 받을 때 공간·소음·향 같은 환경을 어떻게 준비하면 좋은지",
-      "region_hint": "경기 분당, 일산",
-      "related_label": "신도시 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "분당 출장마사지, 신도시 평일 저녁의 안정감",
-          "href": "../../region/gyeonggi/seongnam/bundang-gu/index.html"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "일산 출장마사지, 신도시 가족의 주말 저녁",
-          "href": "../../region/gyeonggi/goyang/index.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "도곡동 출장마사지, 타워팰리스 권역의 흐름",
-          "href": "../../region/seoul/gangnam/dogok.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "next-day-fatigue-after-massage",
-      "post_type": "guide",
-      "title": "마사지 받고 다음 날 더 피곤한 이유",
-      "search_intent": "마사지 후에 오히려 피곤하거나 몸살처럼 느껴지는 이유와 대응 방법",
-      "region_hint": "",
-      "related_label": "회복 관련 정보 기반",
-      "related_links": [
-        {
-          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
-          "href": "../../region/seoul/jungnang/myeonmok.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "이용 후기 모음",
-          "href": "../../reviews/index.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "couple-outcall-difference",
-      "post_type": "guide",
-      "title": "커플로 받는 출장마사지, 어떤 점이 다를까",
-      "search_intent": "연인·부부가 함께 받는 커플 마사지의 진행 방식, 비용, 예약 시 확인 사항",
-      "region_hint": "제주, 부산 해운대",
-      "related_label": "커플 이용 권역 정보 기반",
-      "related_links": [
-        {
-          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
-          "href": "../../region/busan/haeundae/index.html"
-        },
-        {
-          "text": "커플 마사지, 동시 진행 코스의 흐름",
-          "href": "../../services/couple.html"
-        },
-        {
-          "text": "일산 출장마사지, 신도시 가족의 주말 저녁",
-          "href": "../../region/gyeonggi/goyang/index.html"
-        },
-        {
-          "text": "로미로미, 하와이 전통 리듬의 이완",
-          "href": "../../services/lomi.html"
-        },
-        {
-          "text": "제주 권역 안내",
-          "href": "../../region/jeju/index.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "outcall-review-real-vs-fake",
-      "post_type": "guide",
-      "title": "출장마사지 후기, 진짜와 가짜를 가려내는 법",
-      "search_intent": "출장마사지 업체 후기를 볼 때 신뢰할 수 있는 후기와 광고성 후기를 구분하는 기준",
-      "region_hint": "",
-      "related_label": "이용자 후기 정보 기반",
-      "related_links": [
-        {
-          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
-          "href": "../../region/seoul/jungnang/myeonmok.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "망우동 출장마사지, 의외로 조용한 위로",
-          "href": "../../region/seoul/jungnang/manggu.html"
-        },
-        {
-          "text": "호텔식 마사지, 객실 출장의 매너와 절차",
-          "href": "../../services/hotel.html"
-        },
-        {
-          "text": "실이용 후기 보기",
-          "href": "../../reviews/index.html"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "안전 이용 가이드",
-          "href": "../../support/index.html#safety"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "swedish-vs-aroma",
-      "post_type": "guide",
-      "title": "스웨디시와 아로마, 결국 뭐가 다른 걸까",
-      "search_intent": "스웨디시와 아로마마사지의 진짜 차이, 어떤 사람에게 어느 쪽이 더 맞는지",
-      "region_hint": "",
-      "related_label": "코스별 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "신사동 출장마사지, 가로수길의 늦은 저녁",
-          "href": "../../region/seoul/gangnam/sinsa.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "한남동 출장마사지, 외국계 거주민의 차분한 권역",
-          "href": "../../region/seoul/yongsan/hannam.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "로미로미, 하와이 전통 리듬의 이완",
-          "href": "../../services/lomi.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "thai-massage-why-refreshing",
-      "post_type": "guide",
-      "title": "타이마사지가 시원하다고 하는 이유",
-      "search_intent": "타이마사지가 왜 깊은 시원함을 준다고 하는지, 어떤 사람에게 잘 맞는지",
-      "region_hint": "",
-      "related_label": "강도 선호 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        },
-        {
-          "text": "구의동 출장마사지, 대학가 새벽의 다른 표정",
-          "href": "../../region/seoul/gwangjin/guui.html"
-        },
-        {
-          "text": "스포츠 마사지, 운동 후 근육 회복",
-          "href": "../../services/sports.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "what-is-lomi-lomi",
-      "post_type": "guide",
-      "title": "로미로미를 처음 들어본 분들에게",
-      "search_intent": "로미로미가 어떤 마사지인지, 어떤 분위기와 효과를 기대할 수 있는지",
-      "region_hint": "제주, 부산",
-      "related_label": "휴양·코스 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "청담동 출장마사지, 명품 거리의 차분한 공간",
-          "href": "../../region/seoul/gangnam/cheongdam.html"
-        },
-        {
-          "text": "로미로미, 하와이 전통 리듬의 이완",
-          "href": "../../services/lomi.html"
-        },
-        {
-          "text": "해운대 출장마사지, 여행 첫날 호텔에서",
-          "href": "../../region/busan/haeundae/index.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "제주 권역 안내",
-          "href": "../../region/jeju/index.html"
-        },
-        {
-          "text": "커플 마사지, 동시 진행 코스의 흐름",
-          "href": "../../services/couple.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "stubborn-shoulder-tightness",
-      "post_type": "guide",
-      "title": "어깨 결림이 도무지 안 풀릴 때",
-      "search_intent": "만성 어깨 결림이 풀리지 않는 원인과 마사지·생활 습관으로 풀어내는 방법",
-      "region_hint": "",
-      "related_label": "통증 부위 관련 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        },
-        {
-          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
-          "href": "../../region/seoul/yeongdeungpo/index.html"
-        },
-        {
-          "text": "스포츠 마사지, 운동 후 근육 회복",
-          "href": "../../services/sports.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "tech-neck-headache",
-      "post_type": "guide",
-      "title": "거북목 때문에 두통이 온다면",
-      "search_intent": "거북목 자세에서 시작되는 긴장성 두통의 원인과 마사지로 풀어내는 접근",
-      "region_hint": "",
-      "related_label": "사무·자세 관련 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
-          "href": "../../region/seoul/yeongdeungpo/index.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "광화문 출장마사지, 관공서·기업 권역의 짧은 회복",
-          "href": "../../region/seoul/jongno/index.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "lower-back-after-overtime",
-      "post_type": "guide",
-      "title": "야근 후 허리 통증, 마사지로 풀 수 있을까",
-      "search_intent": "야근으로 누적된 허리 통증을 마사지가 어떻게 도와주는지, 자가 관리는 어떻게 같이 해야 하는지",
-      "region_hint": "서울 영등포, 강남",
-      "related_label": "직장인 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
-          "href": "../../region/seoul/yeongdeungpo/index.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        },
-        {
-          "text": "영등포구 전체 권역 안내",
-          "href": "../../region/seoul/yeongdeungpo/index.html"
-        },
-        {
-          "text": "스포츠 마사지, 운동 후 근육 회복",
-          "href": "../../services/sports.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "calf-swelling-care",
-      "post_type": "guide",
-      "title": "종아리 부종이 심한 분께 추천하는 관리",
-      "search_intent": "종아리 부종의 원인과 마사지·생활 습관으로 줄이는 방법",
-      "region_hint": "",
-      "related_label": "여성·홈케어 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "압구정동 출장마사지, 한강변 고급 주거의 분위기",
-          "href": "../../region/seoul/gangnam/apgujeong.html"
-        },
-        {
-          "text": "발 마사지, 부종·피로 부위형 케어",
-          "href": "../../services/foot.html"
-        },
-        {
-          "text": "대치동 출장마사지, 학원가 부모의 짧은 회복",
-          "href": "../../region/seoul/gangnam/daechi.html"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "여성전용 출장, 안심 이용을 위한 가이드",
-          "href": "../../services/women.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "post-workout-massage-timing",
-      "post_type": "guide",
-      "title": "운동 후 근육통, 마사지 받는 타이밍",
-      "search_intent": "운동 직후·다음 날·며칠 뒤 중 마사지가 가장 효과적인 시점은 언제인지",
-      "region_hint": "",
-      "related_label": "운동·회복 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "성수동 출장마사지, 카페·공방 거리의 회복",
-          "href": "../../region/seoul/seongdong/seongsu.html"
-        },
-        {
-          "text": "스포츠 마사지, 운동 후 근육 회복",
-          "href": "../../services/sports.html"
-        },
-        {
-          "text": "망원동 출장마사지, 한강공원 권역의 분위기",
-          "href": "../../region/seoul/mapo/mangwon.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "overtime-worker-recovery",
-      "post_type": "guide",
-      "title": "야근이 잦은 직장인의 회복 루틴",
-      "search_intent": "야근이 일상인 직장인이 컨디션을 유지하기 위해 챙겨야 할 회복 루틴",
-      "region_hint": "서울 강남, 영등포",
-      "related_label": "직장인 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "역삼동 출장마사지, 평일 저녁 IT 거리의 회복",
-          "href": "../../region/seoul/gangnam/yeoksam.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "여의도 출장마사지, 금융가 야근의 끝에서",
-          "href": "../../region/seoul/yeongdeungpo/index.html"
-        },
-        {
-          "text": "24시간 출장, 심야 시간대의 안전한 선택",
-          "href": "../../services/24hr.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "therapist-strength-adjustment",
-      "post_type": "guide",
-      "title": "10년 경력 관리사가 알려주는 강도 조절의 진실",
-      "search_intent": "마사지 강도(약·중·강)를 어떻게 요청해야 만족도가 올라가는지, 현장에서 흔히 일어나는 미스커뮤니케이션",
-      "region_hint": "",
-      "related_label": "강도 선호 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "면목동 출장마사지에서 진짜 힘들다 말해본 날",
-          "href": "../../region/seoul/jungnang/myeonmok.html"
-        },
-        {
-          "text": "스웨디시 출장, 첫 이용자에게 가장 무난한 선택",
-          "href": "../../services/swedish.html"
-        },
-        {
-          "text": "구의동 출장마사지, 대학가 새벽의 다른 표정",
-          "href": "../../region/seoul/gwangjin/guui.html"
-        },
-        {
-          "text": "타이 마사지, 깊은 압을 원하는 분께",
-          "href": "../../services/thai.html"
-        },
-        {
-          "text": "스포츠 마사지, 운동 후 근육 회복",
-          "href": "../../services/sports.html"
-        }
-      ],
-      "used": false
-    },
-    {
-      "slug": "trouble-sleeping-autonomic",
-      "post_type": "guide",
-      "title": "잠들기 어려운 밤, 자율신경 안정시키기",
-      "search_intent": "잠에 들기 어려운 밤에 자율신경을 진정시키는 호흡·아로마·환경 만들기",
-      "region_hint": "",
-      "related_label": "수면·휴식 권역 이용 정보 기반",
-      "related_links": [
-        {
-          "text": "한남동 출장마사지, 외국계 거주민의 차분한 권역",
-          "href": "../../region/seoul/yongsan/hannam.html"
-        },
-        {
-          "text": "아로마테라피, 향과 함께하는 깊은 이완",
-          "href": "../../services/aroma.html"
-        },
-        {
-          "text": "연남동 출장마사지, 카페 골목의 차분한 회복",
-          "href": "../../region/seoul/mapo/yeonnam.html"
-        },
-        {
-          "text": "홈케어 출장, 자택 방문형의 작은 차이",
-          "href": "../../services/homecare.html"
-        },
-        {
-          "text": "로미로미, 하와이 전통 리듬의 이완",
-          "href": "../../services/lomi.html"
         }
       ],
       "used": false
