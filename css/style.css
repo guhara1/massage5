@@ -754,7 +754,7 @@ img { max-width: 100%; display: block; }
   min-height: 280px;
   position: relative;
   border-right: 1px solid rgba(255,255,255,0.2);
-  /* 이미지 우선순위: jpg > svg (jpg 업로드 시 자동 적용) */
+  /* 이미지: therapist-hero.png (jpg 업로드 시 자동 적용) */
 }
 .cta-call-body {
   padding: 36px 40px;
