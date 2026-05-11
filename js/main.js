@@ -40,6 +40,21 @@
     return ((h ? h.textContent : el.textContent) || '').trim();
   };
 
+  // ===== Reading progress bar (매거진 글) =====
+  if (document.body.classList.contains('magazine-post')) {
+    const bar = document.createElement('div');
+    bar.className = 'read-progress';
+    document.body.appendChild(bar);
+    const update = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop;
+      const max = h.scrollHeight - h.clientHeight;
+      bar.style.width = max > 0 ? (scrolled / max * 100) + '%' : '0';
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
   // ===== Inject floating call CTA (모든 페이지 공통) =====
   if (!document.querySelector('.float-call')) {
     const a = document.createElement('a');

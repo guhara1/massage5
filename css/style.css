@@ -2127,12 +2127,21 @@ details.faq p {
 
 /* Floating CTA sits over footer's bottom area — no body padding needed */
 
-/* Magazine post specific */
+/* Magazine post — premium reading layout */
 .post-meta {
   font-size: 13px;
   color: #94A3B8;
   letter-spacing: .02em;
   margin-top: 4px;
+}
+.post-meta .reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid #CBD5E1;
+  color: #64748B;
 }
 .card-date {
   font-size: 11px;
@@ -2143,13 +2152,144 @@ details.faq p {
   display: block;
   margin-bottom: 8px;
 }
-.article-content section.article-section h2 {
-  margin-top: 28px;
+.card-category {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(11, 95, 88, 0.08);
+  color: #0B5F58;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
-.article-content section.article-section p {
-  margin: 12px 0;
-  line-height: 1.85;
-  color: #1f2937;
+
+/* Magazine article reading optimization */
+.magazine-post .article-wrap {
+  background: #fff;
+  padding: 56px 0 72px;
+}
+.magazine-post .article-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.magazine-post .article-section + .article-section {
+  margin-top: 12px;
+}
+.magazine-post .article-section h2 {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+  margin: 56px 0 20px;
+  padding-left: 18px;
+  border-left: 4px solid #0EA89B;
+  position: relative;
+}
+.magazine-post .article-section:first-child h2 { margin-top: 0; }
+.magazine-post .article-section p {
+  font-size: 17px;
+  line-height: 1.95;
+  color: #2A3441;
+  margin: 0 0 18px;
+  letter-spacing: -0.15px;
+  word-break: keep-all;
+  font-weight: 420;
+}
+.magazine-post .article-section p:last-child { margin-bottom: 0; }
+.magazine-post .article-section p strong { font-weight: 700; color: #0F172A; }
+
+.magazine-post .page-header {
+  background: linear-gradient(180deg, #FBFAF7 0%, #F3EEDE 100%);
+  padding: 48px 0 56px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+.magazine-post .page-header .container {
+  max-width: 760px;
+}
+.magazine-post .page-header h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.3;
+  letter-spacing: -.8px;
+  color: #0F172A;
+  word-break: keep-all;
+}
+
+/* Reading progress bar */
+.read-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0B5F58, #0EA89B);
+  z-index: 10000;
+  width: 0;
+  transition: width .1s ease;
+}
+
+/* Magazine latest cards */
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -16px rgba(11, 95, 88, 0.28);
+  border-color: rgba(11, 95, 88, 0.3);
+}
+.post-card h3 {
+  font-size: 17px;
+  line-height: 1.45;
+  color: #0F172A;
+  margin: 0 0 10px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+.post-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #64748B;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post-card .post-card__meta {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+@media (max-width: 720px) {
+  .magazine-post .article-section h2 {
+    font-size: 19px;
+    padding-left: 14px;
+    border-left-width: 3px;
+    margin: 40px 0 16px;
+  }
+  .magazine-post .article-section p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  .magazine-post .article-wrap { padding: 36px 0 48px; }
 }
 
 /* Utility */
