@@ -40,6 +40,21 @@
     return ((h ? h.textContent : el.textContent) || '').trim();
   };
 
+  // ===== Inject floating call CTA (모든 페이지 공통) =====
+  if (!document.querySelector('.float-call')) {
+    const a = document.createElement('a');
+    a.href = 'tel:0508-202-4683';
+    a.className = 'float-call';
+    a.setAttribute('aria-label', '예약 전화 0508-202-4683');
+    a.innerHTML =
+      '<span class="fc-icon" aria-hidden="true">☎</span>' +
+      '<span class="fc-text">' +
+        '<span class="fc-label">예약·안내 전화</span>' +
+        '<span class="fc-num">0508-202-4683</span>' +
+      '</span>';
+    document.body.appendChild(a);
+  }
+
   // 3차·4차: district directory buttons (시·군·구 + 행정동)
   document.querySelectorAll('.district-row').forEach(c => sortChildren(c, plainText));
 
