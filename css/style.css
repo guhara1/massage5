@@ -2127,16 +2127,18 @@ details.faq p {
 
 /* Floating CTA sits over footer's bottom area — no body padding needed */
 
-/* Dark "함께 보면 좋은 글" — region narrative style */
+/* "함께 보면 좋은 글" — 라이트 톤 (페이지와 자연스럽게 어우러짐) */
 .related-dark {
-  background: linear-gradient(180deg, #1F1814 0%, #14100C 100%) !important;
+  background: linear-gradient(180deg, #FBFAF7 0%, #F5EFE0 100%);
+  border: 1px solid rgba(11, 95, 88, 0.12);
   border-radius: 20px;
-  padding: 36px 36px 32px;
+  padding: 32px 36px 28px;
   margin: 56px auto 24px;
   position: relative;
   overflow: hidden;
   max-width: 760px;
-  color: #E8E4DE;
+  color: #2A3441;
+  box-shadow: 0 4px 14px -8px rgba(15, 23, 42, 0.08);
 }
 .magazine-post .related-dark {
   max-width: 760px;
@@ -2146,17 +2148,19 @@ details.faq p {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #ff7f00, #ffa340, transparent);
+  background: linear-gradient(90deg, #0B5F58, #0EA89B, #ff7f00);
 }
 .related-dark__head {
   display: flex;
   align-items: baseline;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(11, 95, 88, 0.12);
 }
 .related-dark__head h2 {
-  color: #fff;
+  color: #0F172A;
   font-size: 18px;
   font-weight: 800;
   margin: 0;
@@ -2166,11 +2170,10 @@ details.faq p {
   gap: 8px;
 }
 .related-dark__head h2 .pin {
-  color: #ff7f00;
   font-size: 16px;
 }
 .related-dark__head .sub {
-  color: #94A3B8;
+  color: #64748B;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -.1px;
@@ -2181,22 +2184,22 @@ details.faq p {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
+  column-gap: 28px;
   row-gap: 0;
 }
 .related-dark__list li {
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-  padding: 14px 0;
+  border-bottom: 1px dashed rgba(11, 95, 88, 0.15);
+  padding: 12px 0;
 }
 .related-dark__list li:last-child,
 .related-dark__list li:nth-last-child(2):nth-child(odd) {
   border-bottom: none;
 }
 .related-dark__list a {
-  color: #E8E4DE;
+  color: #1F2937;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14.5px;
+  font-weight: 600;
   line-height: 1.55;
   display: flex;
   align-items: flex-start;
@@ -2208,22 +2211,23 @@ details.faq p {
 .related-dark__list a::before {
   content: "•";
   color: #ff7f00;
-  font-size: 16px;
+  font-size: 18px;
   flex-shrink: 0;
-  line-height: 1.5;
+  line-height: 1.4;
+  font-weight: 700;
 }
 .related-dark__list a:hover {
-  color: #ff7f00;
+  color: #0B5F58;
   transform: translateX(2px);
 }
 
 @media (max-width: 720px) {
   .related-dark {
-    padding: 28px 22px 24px;
+    padding: 24px 22px 20px;
     border-radius: 16px;
   }
   .related-dark__list { grid-template-columns: 1fr; column-gap: 0; }
-  .related-dark__list li { padding: 12px 0; }
+  .related-dark__list li { padding: 11px 0; }
   .related-dark__list li:last-child { border-bottom: none; }
 }
 
