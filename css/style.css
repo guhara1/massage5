@@ -2127,6 +2127,31 @@ details.faq p {
 
 /* Floating CTA sits over footer's bottom area — no body padding needed */
 
+/* Magazine post specific */
+.post-meta {
+  font-size: 13px;
+  color: #94A3B8;
+  letter-spacing: .02em;
+  margin-top: 4px;
+}
+.card-date {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #0B5F58;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+.article-content section.article-section h2 {
+  margin-top: 28px;
+}
+.article-content section.article-section p {
+  margin: 12px 0;
+  line-height: 1.85;
+  color: #1f2937;
+}
+
 /* Utility */
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .mt-0 { margin-top: 0 !important; }

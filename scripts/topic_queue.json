@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "comment": "각 토픽은 한 번씩만 사용. used:true 처리되면 건너뜀. 다 쓰면 새 토픽 추가 필요.",
+  "topics": [
+    {
+      "slug": "first-time-outcall-five-tips",
+      "title": "출장마사지 처음 받기 전 알아두면 좋은 것들",
+      "category": "outcall",
+      "region_hint": "서울 강남, 마포",
+      "search_intent": "출장마사지를 처음 받는 사람이 무엇을 준비하고 어떻게 진행되는지 알고 싶음",
+      "related_links": [
+        {"text": "강남 출장마사지 권역 안내", "href": "../../region/seoul/gangnam/index.html"},
+        {"text": "스웨디시 코스 자세히 보기", "href": "../../services/swedish.html"},
+        {"text": "처음 이용자를 위한 안전 가이드", "href": "../../support/index.html#guide"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "hotel-room-outcall-policy",
+      "title": "호텔 객실 출장, 호텔별로 다른 작은 차이들",
+      "category": "outcall",
+      "region_hint": "서울 중구, 강남",
+      "search_intent": "호텔에서 출장마사지를 받을 때 호텔 정책·층수·출입 절차가 어떻게 다른지 궁금함",
+      "related_links": [
+        {"text": "호텔식 마사지 안내", "href": "../../services/hotel.html"},
+        {"text": "중구·명동 권역 안내", "href": "../../region/seoul/jung/index.html"},
+        {"text": "강남 호텔 권역 안내", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "why-outcall-price-differs",
+      "title": "출장마사지 가격이 권역마다 다른 이유",
+      "category": "outcall",
+      "region_hint": "서울, 경기, 부산",
+      "search_intent": "출장마사지 가격이 지역마다 왜 다른지, 어떤 요소가 가격에 들어가는지 알고 싶음",
+      "related_links": [
+        {"text": "전국 권역별 안내", "href": "../../region/index.html"},
+        {"text": "스웨디시 코스 가격대", "href": "../../services/swedish.html"},
+        {"text": "예약 전 확인할 안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "late-night-outcall-safety",
+      "title": "심야 출장마사지를 안전하게 받는 방법",
+      "category": "outcall",
+      "region_hint": "서울 강남, 마포",
+      "search_intent": "새벽 시간대에 출장마사지를 받고 싶은데 안전한지, 어떻게 준비해야 하는지",
+      "related_links": [
+        {"text": "24시간 운영 코스 안내", "href": "../../services/24hr.html"},
+        {"text": "강남 야간 권역 안내", "href": "../../region/seoul/gangnam/index.html"},
+        {"text": "안전 이용 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "five-questions-before-booking",
+      "title": "예약 전 꼭 물어봐야 할 다섯 가지",
+      "category": "outcall",
+      "region_hint": "전국",
+      "search_intent": "출장마사지 예약 전화·문자에서 어떤 항목을 사전에 확인해야 분쟁을 예방할 수 있는지",
+      "related_links": [
+        {"text": "안전 이용 가이드", "href": "../../support/index.html#safety"},
+        {"text": "처음 이용 안내", "href": "../../support/index.html#guide"},
+        {"text": "전국 지역 보기", "href": "../../region/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "home-outcall-setup",
+      "title": "자택 출장마사지, 받기 좋은 환경 만들기",
+      "category": "outcall",
+      "region_hint": "경기 분당, 일산",
+      "search_intent": "자택에서 출장마사지를 받을 때 공간·소음·향 같은 환경을 어떻게 준비하면 좋은지",
+      "related_links": [
+        {"text": "홈케어 코스 안내", "href": "../../services/homecare.html"},
+        {"text": "성남·분당 권역 안내", "href": "../../region/gyeonggi/seongnam/index.html"},
+        {"text": "고양·일산 권역 안내", "href": "../../region/gyeonggi/goyang/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "next-day-fatigue-after-massage",
+      "title": "마사지 받고 다음 날 더 피곤한 이유",
+      "category": "outcall",
+      "region_hint": "",
+      "search_intent": "마사지 후에 오히려 피곤하거나 몸살처럼 느껴지는 이유와 대응 방법",
+      "related_links": [
+        {"text": "스웨디시 코스 안내", "href": "../../services/swedish.html"},
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "이용 후기 모음", "href": "../../reviews/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "couple-outcall-difference",
+      "title": "커플로 받는 출장마사지, 어떤 점이 다를까",
+      "category": "outcall",
+      "region_hint": "제주, 부산 해운대",
+      "search_intent": "연인·부부가 함께 받는 커플 마사지의 진행 방식, 비용, 예약 시 확인 사항",
+      "related_links": [
+        {"text": "커플마사지 코스 안내", "href": "../../services/couple.html"},
+        {"text": "제주 권역 안내", "href": "../../region/jeju/index.html"},
+        {"text": "해운대 권역 안내", "href": "../../region/busan/haeundae/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "outcall-review-real-vs-fake",
+      "title": "출장마사지 후기, 진짜와 가짜를 가려내는 법",
+      "category": "outcall",
+      "region_hint": "",
+      "search_intent": "출장마사지 업체 후기를 볼 때 신뢰할 수 있는 후기와 광고성 후기를 구분하는 기준",
+      "related_links": [
+        {"text": "실이용 후기 보기", "href": "../../reviews/index.html"},
+        {"text": "안전 이용 가이드", "href": "../../support/index.html#safety"},
+        {"text": "전국 권역 보기", "href": "../../region/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "swedish-vs-aroma",
+      "title": "스웨디시와 아로마, 결국 뭐가 다른 걸까",
+      "category": "type",
+      "region_hint": "",
+      "search_intent": "스웨디시와 아로마마사지의 진짜 차이, 어떤 사람에게 어느 쪽이 더 맞는지",
+      "related_links": [
+        {"text": "스웨디시 자세히 보기", "href": "../../services/swedish.html"},
+        {"text": "아로마테라피 자세히 보기", "href": "../../services/aroma.html"},
+        {"text": "전체 서비스 보기", "href": "../../services/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "thai-massage-why-refreshing",
+      "title": "타이마사지가 시원하다고 하는 이유",
+      "category": "type",
+      "region_hint": "",
+      "search_intent": "타이마사지가 왜 깊은 시원함을 준다고 하는지, 어떤 사람에게 잘 맞는지",
+      "related_links": [
+        {"text": "타이 마사지 자세히 보기", "href": "../../services/thai.html"},
+        {"text": "스포츠 마사지 안내", "href": "../../services/sports.html"},
+        {"text": "어깨·등 관리 권역", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "what-is-lomi-lomi",
+      "title": "로미로미를 처음 들어본 분들에게",
+      "category": "type",
+      "region_hint": "제주, 부산",
+      "search_intent": "로미로미가 어떤 마사지인지, 어떤 분위기와 효과를 기대할 수 있는지",
+      "related_links": [
+        {"text": "로미로미 자세히 보기", "href": "../../services/lomi.html"},
+        {"text": "제주 권역 안내", "href": "../../region/jeju/index.html"},
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "sports-massage-for-athletes",
+      "title": "운동하는 사람이 스포츠 마사지를 찾는 진짜 이유",
+      "category": "type",
+      "region_hint": "",
+      "search_intent": "운동 후 회복용으로 스포츠 마사지가 왜 좋은지, 어느 타이밍에 받으면 좋은지",
+      "related_links": [
+        {"text": "스포츠 마사지 자세히 보기", "href": "../../services/sports.html"},
+        {"text": "타이 마사지 안내", "href": "../../services/thai.html"},
+        {"text": "발마사지 안내", "href": "../../services/foot.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "hot-stone-who-fits",
+      "title": "핫스톤 마사지, 누구에게 잘 맞을까",
+      "category": "type",
+      "region_hint": "",
+      "search_intent": "핫스톤이 어떤 원리이고 어떤 체질·상황의 사람에게 적합한지",
+      "related_links": [
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "스파/사우나 안내", "href": "../../services/spa.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "stubborn-shoulder-tightness",
+      "title": "어깨 결림이 도무지 안 풀릴 때",
+      "category": "pain",
+      "region_hint": "",
+      "search_intent": "만성 어깨 결림이 풀리지 않는 원인과 마사지·생활 습관으로 풀어내는 방법",
+      "related_links": [
+        {"text": "타이 마사지 안내", "href": "../../services/thai.html"},
+        {"text": "스포츠 마사지 안내", "href": "../../services/sports.html"},
+        {"text": "강남 출장 권역", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "tech-neck-headache",
+      "title": "거북목 때문에 두통이 온다면",
+      "category": "pain",
+      "region_hint": "",
+      "search_intent": "거북목 자세에서 시작되는 긴장성 두통의 원인과 마사지로 풀어내는 접근",
+      "related_links": [
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "강남 권역 안내", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "lower-back-after-overtime",
+      "title": "야근 후 허리 통증, 마사지로 풀 수 있을까",
+      "category": "pain",
+      "region_hint": "서울 영등포, 강남",
+      "search_intent": "야근으로 누적된 허리 통증을 마사지가 어떻게 도와주는지, 자가 관리는 어떻게 같이 해야 하는지",
+      "related_links": [
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "영등포 권역", "href": "../../region/seoul/yeongdeungpo/index.html"},
+        {"text": "강남 권역", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "calf-swelling-care",
+      "title": "종아리 부종이 심한 분께 추천하는 관리",
+      "category": "pain",
+      "region_hint": "",
+      "search_intent": "종아리 부종의 원인과 마사지·생활 습관으로 줄이는 방법",
+      "related_links": [
+        {"text": "발마사지 안내", "href": "../../services/foot.html"},
+        {"text": "홈케어 안내", "href": "../../services/homecare.html"},
+        {"text": "여성전용 코스 안내", "href": "../../services/women.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "post-workout-massage-timing",
+      "title": "운동 후 근육통, 마사지 받는 타이밍",
+      "category": "pain",
+      "region_hint": "",
+      "search_intent": "운동 직후·다음 날·며칠 뒤 중 마사지가 가장 효과적인 시점은 언제인지",
+      "related_links": [
+        {"text": "스포츠 마사지 안내", "href": "../../services/sports.html"},
+        {"text": "타이 마사지 안내", "href": "../../services/thai.html"},
+        {"text": "발마사지 안내", "href": "../../services/foot.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "overtime-worker-recovery",
+      "title": "야근이 잦은 직장인의 회복 루틴",
+      "category": "office",
+      "region_hint": "서울 강남, 영등포",
+      "search_intent": "야근이 일상인 직장인이 컨디션을 유지하기 위해 챙겨야 할 회복 루틴",
+      "related_links": [
+        {"text": "24시간 운영 코스", "href": "../../services/24hr.html"},
+        {"text": "강남 권역 안내", "href": "../../region/seoul/gangnam/index.html"},
+        {"text": "영등포 권역 안내", "href": "../../region/seoul/yeongdeungpo/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "office-posture-habits",
+      "title": "사무직이 챙겨야 할 작은 자세 습관",
+      "category": "office",
+      "region_hint": "",
+      "search_intent": "사무실에서 누적되는 자세 문제를 줄이는 일상 습관·스트레칭·마사지 조합",
+      "related_links": [
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "타이 마사지 안내", "href": "../../services/thai.html"},
+        {"text": "강남 권역 안내", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "frequent-business-traveler",
+      "title": "출장 잦은 직장인의 컨디션 관리법",
+      "category": "office",
+      "region_hint": "전국",
+      "search_intent": "출장이 많은 직장인이 호텔·이동 중에 컨디션을 유지하는 노하우",
+      "related_links": [
+        {"text": "호텔식 마사지 안내", "href": "../../services/hotel.html"},
+        {"text": "전국 권역 보기", "href": "../../region/index.html"},
+        {"text": "안전 이용 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "burnout-body-signals",
+      "title": "번아웃이 왔을 때 몸이 보내는 신호",
+      "category": "office",
+      "region_hint": "",
+      "search_intent": "번아웃 초기 신체 신호와 대응 방법, 회복을 돕는 케어 방향",
+      "related_links": [
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "여성전용 코스 안내", "href": "../../services/women.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "weekend-trip-recovery",
+      "title": "1박 2일 여행에서 컨디션 회복하는 일정",
+      "category": "travel",
+      "region_hint": "부산 해운대, 강원",
+      "search_intent": "짧은 여행 일정 안에서 마사지·휴식·일정 배치를 어떻게 짜야 하는지",
+      "related_links": [
+        {"text": "호텔식 마사지 안내", "href": "../../services/hotel.html"},
+        {"text": "해운대 권역 안내", "href": "../../region/busan/haeundae/index.html"},
+        {"text": "강원 권역 안내", "href": "../../region/gangwon/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "gangnam-hotel-outcall",
+      "title": "강남 호텔 출장, 객실에서 받기 전에 알아둘 것",
+      "category": "travel",
+      "region_hint": "서울 강남",
+      "search_intent": "강남 권역 호텔에서 출장을 받을 때 호텔별 정책·시간대·동선",
+      "related_links": [
+        {"text": "강남 권역 안내", "href": "../../region/seoul/gangnam/index.html"},
+        {"text": "호텔식 마사지 안내", "href": "../../services/hotel.html"},
+        {"text": "서초 권역 안내", "href": "../../region/seoul/seocho/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "busan-trip-day-one",
+      "title": "부산 여행 첫날, 호텔 출장 받기 좋은 시간",
+      "category": "travel",
+      "region_hint": "부산 해운대, 서면",
+      "search_intent": "부산 1박 일정에서 호텔 출장을 받을 때 가장 좋은 시간대와 동선",
+      "related_links": [
+        {"text": "부산 권역 안내", "href": "../../region/busan/index.html"},
+        {"text": "해운대 권역 안내", "href": "../../region/busan/haeundae/index.html"},
+        {"text": "호텔식 마사지 안내", "href": "../../services/hotel.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "trouble-sleeping-autonomic",
+      "title": "잠들기 어려운 밤, 자율신경 안정시키기",
+      "category": "sleep",
+      "region_hint": "",
+      "search_intent": "잠에 들기 어려운 밤에 자율신경을 진정시키는 호흡·아로마·환경 만들기",
+      "related_links": [
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "홈케어 안내", "href": "../../services/homecare.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "chronic-stress-body-impact",
+      "title": "만성 스트레스가 몸에 남기는 흔적들",
+      "category": "sleep",
+      "region_hint": "",
+      "search_intent": "만성 스트레스가 신체에 미치는 영향과 그것을 풀어내는 케어의 방향",
+      "related_links": [
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "여성전용 코스 안내", "href": "../../services/women.html"},
+        {"text": "강남 권역 안내", "href": "../../region/seoul/gangnam/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "evening-routine-better-sleep",
+      "title": "수면의 질을 높이는 저녁 시간 다섯 단계",
+      "category": "sleep",
+      "region_hint": "",
+      "search_intent": "잠들기 두 시간 전부터 어떻게 환경·몸을 정리해야 깊은 잠으로 들어가는지",
+      "related_links": [
+        {"text": "홈케어 안내", "href": "../../services/homecare.html"},
+        {"text": "아로마테라피 안내", "href": "../../services/aroma.html"},
+        {"text": "여성전용 코스 안내", "href": "../../services/women.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "therapist-strength-adjustment",
+      "title": "10년 경력 관리사가 알려주는 강도 조절의 진실",
+      "category": "interview",
+      "region_hint": "",
+      "search_intent": "마사지 강도(약·중·강)를 어떻게 요청해야 만족도가 올라가는지, 현장에서 흔히 일어나는 미스커뮤니케이션",
+      "related_links": [
+        {"text": "스웨디시 안내", "href": "../../services/swedish.html"},
+        {"text": "타이 마사지 안내", "href": "../../services/thai.html"},
+        {"text": "처음 이용 안내", "href": "../../support/index.html#guide"}
+      ],
+      "used": false
+    }
+  ]
+}
