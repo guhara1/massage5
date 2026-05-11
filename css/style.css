@@ -285,6 +285,85 @@ img { max-width: 100%; display: block; }
 }
 .card .tag:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
 
+/* === Region quick find (compact pills) === */
+.region-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.region-block {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.region-block:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.region-block__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.region-block__head h3 {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+  letter-spacing: -.3px;
+}
+.region-mark {
+  width: 32px; height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.region-more {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.region-more:hover { color: var(--primary-hover); }
+.region-block__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.region-block__pills a {
+  display: inline-block;
+  font-size: 13px;
+  padding: 7px 14px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-soft);
+  transition: background .15s, color .15s, border-color .15s, transform .15s;
+}
+.region-block__pills a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .region-grid { grid-template-columns: 1fr; gap: 12px; }
+  .region-block { padding: 16px 18px; }
+  .region-block__head { margin-bottom: 12px; gap: 10px; }
+  .region-block__head h3 { font-size: 16px; }
+  .region-mark { width: 28px; height: 28px; font-size: 13px; }
+  .region-block__pills a { font-size: 12.5px; padding: 6px 12px; }
+}
+
 /* List cards */
 .list-card {
   background: #fff;
