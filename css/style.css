@@ -1490,7 +1490,8 @@ img { max-width: 100%; display: block; }
     font-size: 13.5px;
   }
 }
-.dir-btn {
+.directory-row .dir-btn,
+.directory-grid .dir-btn {
   position: relative;
   isolation: isolate;
   display: flex;
@@ -1513,7 +1514,8 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.2px;
   overflow: hidden;
 }
-.dir-btn::after {
+.directory-row .dir-btn::after,
+.directory-grid .dir-btn::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -1523,21 +1525,26 @@ img { max-width: 100%; display: block; }
   transition: opacity .2s ease;
   z-index: -1;
 }
-.dir-btn:hover {
+.directory-row .dir-btn:hover,
+.directory-grid .dir-btn:hover {
   color: #fff;
   border-color: transparent;
   transform: translateY(-2px);
   box-shadow: 0 12px 24px -10px rgba(11, 95, 88, 0.5), 0 4px 8px -4px rgba(11, 95, 88, 0.25);
 }
-.dir-btn:hover::after { opacity: 1; }
-.dir-btn.active {
+.directory-row .dir-btn:hover::after,
+.directory-grid .dir-btn:hover::after { opacity: 1; }
+.directory-row .dir-btn.active,
+.directory-grid .dir-btn.active {
   color: #fff;
   border-color: transparent;
   font-weight: 800;
   box-shadow: 0 10px 22px -8px rgba(11, 95, 88, 0.55), 0 4px 8px -4px rgba(11, 95, 88, 0.25);
 }
-.dir-btn.active::after { opacity: 1; }
-.dir-btn.active:hover { transform: translateY(-2px); }
+.directory-row .dir-btn.active::after,
+.directory-grid .dir-btn.active::after { opacity: 1; }
+.directory-row .dir-btn.active:hover,
+.directory-grid .dir-btn.active:hover { transform: translateY(-2px); }
 .dir-empty { display: none; }
 
 .directory-row { grid-template-columns: repeat(9, 1fr); }
@@ -1551,14 +1558,16 @@ img { max-width: 100%; display: block; }
   .directory { padding: 64px 0 72px; }
   .directory-row { grid-template-columns: repeat(4, 1fr); }
   .directory-grid { grid-template-columns: repeat(3, 1fr); }
-  .dir-btn { font-size: 13.5px; padding: 13px 8px; min-height: 46px; border-radius: 10px; }
+  .directory-row .dir-btn,
+  .directory-grid .dir-btn { font-size: 13.5px; padding: 13px 8px; min-height: 46px; border-radius: 10px; }
   .directory-title { font-size: 20px; }
   .directory-accent { height: 38px; }
 }
 @media (max-width: 480px) {
   .directory-row { grid-template-columns: repeat(3, 1fr); }
   .directory-grid { grid-template-columns: repeat(3, 1fr); }
-  .dir-btn { font-size: 13px; padding: 12px 6px; min-height: 44px; }
+  .directory-row .dir-btn,
+  .directory-grid .dir-btn { font-size: 13px; padding: 12px 6px; min-height: 44px; }
   .directory-title { font-size: 18px; }
 }
 
