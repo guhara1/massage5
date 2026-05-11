@@ -1846,7 +1846,8 @@ details.faq p {
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  min-width: 0;
 }
 .trust-item p {
   margin: 0;
@@ -1856,18 +1857,18 @@ details.faq p {
 }
 .trust-item p strong { color: #fff; font-weight: 700; }
 .trust-icon {
-  flex: 0 0 32px;
-  width: 32px;
-  height: 32px;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  color: #94A3B8;
+  color: #CBD5E1;
 }
+.trust-icon svg { display: block; }
 
 /* Main grid */
 .site-footer .container.footer-grid {
