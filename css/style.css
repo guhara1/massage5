@@ -2129,12 +2129,17 @@ details.faq p {
 
 /* Dark "함께 보면 좋은 글" — region narrative style */
 .related-dark {
-  background: linear-gradient(180deg, #1F1814 0%, #14100C 100%);
+  background: linear-gradient(180deg, #1F1814 0%, #14100C 100%) !important;
   border-radius: 20px;
   padding: 36px 36px 32px;
-  margin: 56px 0 24px;
+  margin: 56px auto 24px;
   position: relative;
   overflow: hidden;
+  max-width: 760px;
+  color: #E8E4DE;
+}
+.magazine-post .related-dark {
+  max-width: 760px;
 }
 .related-dark::before {
   content: "";
