@@ -1856,38 +1856,38 @@ details.faq p {
   z-index: 9999;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 22px 14px 18px;
+  gap: 14px;
+  padding: 18px 28px 18px 22px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #0B5F58 0%, #0EA89B 100%);
+  background: linear-gradient(135deg, #ff7f00 0%, #ffa340 100%);
   color: #fff;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: .01em;
   box-shadow:
-    0 14px 32px rgba(11, 95, 88, 0.32),
-    0 4px 10px rgba(11, 95, 88, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+    0 16px 36px rgba(255, 127, 0, 0.4),
+    0 4px 12px rgba(255, 127, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .float-call:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 18px 38px rgba(11, 95, 88, 0.4),
-    0 6px 14px rgba(11, 95, 88, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 22px 44px rgba(255, 127, 0, 0.48),
+    0 6px 16px rgba(255, 127, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 .float-call:active { transform: translateY(0); }
 .float-call .fc-icon {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.22);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 22px;
   position: relative;
 }
 .float-call .fc-icon::before {
@@ -1895,12 +1895,12 @@ details.faq p {
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.55);
   animation: fcPulse 2.2s ease-out infinite;
   pointer-events: none;
 }
 @keyframes fcPulse {
-  0%   { transform: scale(.85); opacity: .75; }
+  0%   { transform: scale(.85); opacity: .8; }
   70%  { transform: scale(1.35); opacity: 0; }
   100% { transform: scale(1.35); opacity: 0; }
 }
@@ -1910,15 +1910,16 @@ details.faq p {
   line-height: 1.15;
 }
 .float-call .fc-label {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: .08em;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.92);
 }
 .float-call .fc-num {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 900;
   letter-spacing: .02em;
+  color: #fff;
 }
 
 @media (max-width: 720px) {
@@ -1927,17 +1928,19 @@ details.faq p {
     right: 16px;
     bottom: 16px;
     justify-content: center;
-    padding: 14px 20px;
-    border-radius: 16px;
+    padding: 16px 22px;
+    border-radius: 18px;
+    gap: 12px;
   }
-  .float-call .fc-icon { width: 34px; height: 34px; font-size: 16px; }
-  .float-call .fc-num { font-size: 15px; }
+  .float-call .fc-icon { width: 40px; height: 40px; font-size: 20px; }
+  .float-call .fc-label { font-size: 12px; }
+  .float-call .fc-num { font-size: 19px; }
 }
 
 /* Footer adds extra bottom padding so fixed CTA doesn't overlap content */
-body { padding-bottom: 96px; }
+body { padding-bottom: 110px; }
 @media (max-width: 720px) {
-  body { padding-bottom: 90px; }
+  body { padding-bottom: 100px; }
 }
 
 /* Utility */
