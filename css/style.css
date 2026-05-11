@@ -721,6 +721,189 @@ img { max-width: 100%; display: block; }
   .mega-card { padding: 22px 20px; }
 }
 
+/* === Booking CTA card (region pages) === */
+.cta-call {
+  padding: 28px 0 0;
+}
+.cta-call-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0B5F58 0%, #0EA89B 100%);
+  box-shadow: 0 20px 50px -12px rgba(11, 95, 88, 0.4), 0 8px 24px -6px rgba(11, 18, 32, 0.18);
+  position: relative;
+  isolation: isolate;
+}
+.cta-call-card::before {
+  content: '';
+  position: absolute;
+  top: -40%; right: -10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.cta-call-image {
+  background-image: url('/assets/therapist-hero.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #F8FAFC;
+  min-height: 280px;
+  position: relative;
+}
+.cta-call-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 60%, rgba(11, 95, 88, 0.45) 100%);
+  pointer-events: none;
+}
+.cta-call-body {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.cta-call-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 14px;
+  backdrop-filter: blur(6px);
+}
+.cta-call-tag::before {
+  content: '●';
+  color: #FDE68A;
+  font-size: 10px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.cta-call-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin: 0 0 8px;
+  color: #fff;
+  line-height: 1.3;
+}
+.cta-call-sub {
+  font-size: 14.5px;
+  margin: 0 0 22px;
+  opacity: 0.95;
+  line-height: 1.65;
+  max-width: 480px;
+}
+.cta-call-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 28px;
+  background: #fff;
+  color: var(--primary) !important;
+  font-weight: 800;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0,0,0,.12);
+  transition: transform .2s, box-shadow .2s;
+  width: fit-content;
+  letter-spacing: -.3px;
+}
+.cta-call-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.4);
+  color: var(--primary-hover) !important;
+}
+.cta-call-phone-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 4px 10px -2px rgba(11, 95, 88, 0.4);
+}
+.cta-call-phone-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.cta-call-phone-num {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.4px;
+  line-height: 1;
+}
+.cta-call-phone-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.cta-call-meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.cta-call-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+}
+.cta-call-meta span::before {
+  content: '✓';
+  width: 16px;
+  height: 16px;
+  background: rgba(255,255,255,0.2);
+  color: #FDE68A;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .cta-call-card { grid-template-columns: 1fr; }
+  .cta-call-image { min-height: 220px; background-position: center center; }
+  .cta-call-image::after {
+    background: linear-gradient(180deg, transparent 50%, rgba(11, 95, 88, 0.55) 100%);
+  }
+  .cta-call-body { padding: 28px 24px; }
+  .cta-call-title { font-size: 20px; }
+  .cta-call-phone { width: 100%; justify-content: center; }
+  .cta-call-meta { justify-content: center; }
+}
+
 /* === Review cards (district hub) === */
 .review-grid {
   display: grid;
