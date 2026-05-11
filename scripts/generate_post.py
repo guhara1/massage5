@@ -439,27 +439,54 @@ def update_magazine_index() -> None:
     posts = list_posts()
     if not posts:
         return
-    cards = "\n".join(
-        f'      <a href="posts/{p["slug"]}.html" class="card">\n'
-        f'        <span class="card-date">{esc(p["date"])}</span>\n'
-        f'        <h3>{esc(p["title"])}</h3>\n'
-        f'        <p>{esc(p["description"][:80])}</p>\n'
-        f'      </a>'
-        for p in posts[:12]
-    )
-    block = f'''{INDEX_MARK_START}
-<section class="section" id="latest">
+    featured = posts[0]
+    others = posts[1:13]  # up to 12 in grid
+
+    feat_html = f'''<section class="section magazine-featured-section">
+  <div class="container">
+    <a href="posts/{featured["slug"]}.html" class="featured-post">
+      <div class="featured-post__top">
+        <span class="featured-eyebrow">📌 Featured</span>
+        <span class="card-category">최신 글</span>
+      </div>
+      <h2>{esc(featured["title"])}</h2>
+      <p class="lead">{esc(featured["description"])}</p>
+      <div class="featured-meta">
+        <span>{esc(featured["date"])}</span>
+        <span class="meta-divider">·</span>
+        <span class="featured-cta">글 읽으러 가기 →</span>
+      </div>
+    </a>
+  </div>
+</section>'''
+
+    if others:
+        grid_cards = "\n".join(
+            f'      <a href="posts/{p["slug"]}.html" class="post-card">\n'
+            f'        <span class="card-category">매거진</span>\n'
+            f'        <h3>{esc(p["title"])}</h3>\n'
+            f'        <p>{esc(p["description"][:120])}</p>\n'
+            f'        <div class="post-card__meta">{esc(p["date"])}<span class="read-arrow">읽기 →</span></div>\n'
+            f'      </a>'
+            for p in others
+        )
+        grid_section = f'''
+<section class="section">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Latest</span>
       <h2>최근 매거진 글</h2>
-      <p>새로 올라온 글을 가장 먼저 만나보세요.</p>
     </div>
-    <div class="grid cols-3">
-{cards}
+    <div class="post-grid">
+{grid_cards}
     </div>
   </div>
-</section>
+</section>'''
+    else:
+        grid_section = ""
+
+    block = f'''{INDEX_MARK_START}
+{feat_html}{grid_section}
 {INDEX_MARK_END}'''
 
     html = MAGAZINE_INDEX.read_text(encoding="utf-8")
