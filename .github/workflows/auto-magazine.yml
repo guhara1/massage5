@@ -34,13 +34,30 @@ jobs:
         run: python scripts/generate_post.py
 
       - name: Commit and push
+        id: commit
         run: |
           git config user.name "Magazine Bot"
           git config user.email "bot@gandago.me"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"
+            echo "pushed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
           git commit -m "magazine: $(date +'%Y-%m-%d') 자동 발행"
           git push
+          echo "pushed=true" >> $GITHUB_OUTPUT
+
+      # Cloudflare Pages 배포 대기 (커밋 후 약 60초)
+      - name: Wait for deploy
+        if: steps.commit.outputs.pushed == 'true'
+        run: sleep 90
+
+      # 추가 색인 ping (배포된 URL 기준으로 다시 한 번 - Naver Search Advisor 무시되지 않도록)
+      - name: Re-ping IndexNow after deploy
+        if: steps.commit.outputs.pushed == 'true'
+        run: |
+          curl -s -o /dev/null -w "Google sitemap ping: %{http_code}\n" \
+            "https://www.google.com/ping?sitemap=https://gandago.me/sitemap.xml" || true
+          curl -s -o /dev/null -w "Bing sitemap ping: %{http_code}\n" \
+            "https://www.bing.com/ping?sitemap=https://gandago.me/sitemap.xml" || true

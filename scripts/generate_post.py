@@ -19,6 +19,8 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+import urllib.request
+import urllib.error
 from anthropic import Anthropic
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -644,6 +646,53 @@ def update_magazine_index() -> None:
 MAGAZINE_SITEMAP = ROOT / "sitemap-magazine.xml"
 MAGAZINE_RSS = ROOT / "magazine" / "rss.xml"
 
+INDEXNOW_KEY = "16e565e44992937c568b7cada0d76106"
+INDEXNOW_KEY_LOCATION = f"{DOMAIN}/{INDEXNOW_KEY}.txt"
+INDEXNOW_ENDPOINTS = [
+    "https://api.indexnow.org/indexnow",
+    "https://www.bing.com/indexnow",
+    "https://yandex.com/indexnow",
+]
+
+
+def ping_indexnow(post_url: str) -> None:
+    """IndexNow API 핑 - Bing·Yandex 즉시 색인 요청."""
+    payload = json.dumps({
+        "host": "gandago.me",
+        "key": INDEXNOW_KEY,
+        "keyLocation": INDEXNOW_KEY_LOCATION,
+        "urlList": [post_url, f"{DOMAIN}/magazine/", f"{DOMAIN}/magazine/rss.xml"],
+    }).encode("utf-8")
+    headers = {"Content-Type": "application/json; charset=utf-8"}
+    for ep in INDEXNOW_ENDPOINTS:
+        try:
+            req = urllib.request.Request(ep, data=payload, headers=headers, method="POST")
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                print(f"[indexnow] {ep} → {resp.status}")
+        except urllib.error.HTTPError as e:
+            # 200/202 success, 4xx body has detail
+            if e.code in (200, 202):
+                print(f"[indexnow] {ep} → {e.code}")
+            else:
+                print(f"[indexnow] {ep} → {e.code} (응답 본문: {e.read()[:120]!r})")
+        except Exception as e:
+            print(f"[indexnow] {ep} → 에러: {e}")
+
+
+def ping_search_engines(post_url: str) -> None:
+    """검색엔진별 사이트맵 갱신 ping (Google·Bing 레거시 + Naver IndexNow)."""
+    # Google·Bing 사이트맵 ping (deprecated 됐지만 안 손해)
+    sitemap_url = f"{DOMAIN}/sitemap.xml"
+    for ping in [
+        f"https://www.google.com/ping?sitemap={sitemap_url}",
+        f"https://www.bing.com/ping?sitemap={sitemap_url}",
+    ]:
+        try:
+            with urllib.request.urlopen(ping, timeout=10) as r:
+                print(f"[sitemap-ping] {ping[:50]}... → {r.status}")
+        except Exception as e:
+            print(f"[sitemap-ping] {ping[:50]}... → 에러: {e}")
+
 
 def update_sitemap(post_url: str) -> None:
     """매거진 sub-sitemap에 새 글 추가."""
@@ -742,6 +791,14 @@ def main() -> int:
 
     update_rss()
     print(f"[ok] RSS 피드 갱신")
+
+    # IndexNow ping (Bing·Yandex 즉시 색인)
+    try:
+        ping_indexnow(post_url)
+        ping_search_engines(post_url)
+    except Exception as e:
+        print(f"[warn] 색인 ping 일부 실패: {e}")
+    print(f"[ok] 색인 요청 ping 완료")
 
     topic["used"] = True
     topic["published_at"] = datetime.now(KST).strftime("%Y-%m-%d")
