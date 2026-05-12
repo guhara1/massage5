@@ -759,6 +759,8 @@ def update_rss() -> None:
     )
     MAGAZINE_RSS.parent.mkdir(parents=True, exist_ok=True)
     MAGAZINE_RSS.write_text(rss, encoding="utf-8")
+    # 루트 미러 (gandago.me/rss.xml 도 작동하게)
+    (ROOT / "rss.xml").write_text(rss, encoding="utf-8")
 
 
 # ----- 메인 -----
