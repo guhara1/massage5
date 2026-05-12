@@ -1,0 +1,52 @@
+{
+  "name": "간다GO - 전국 출장마사지",
+  "short_name": "간다GO",
+  "description": "전국 출장마사지 정보 안내 플랫폼. 검증된 정보를 한곳에서.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBFAF7",
+  "theme_color": "#0B5F58",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "categories": ["lifestyle", "health", "wellness"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "지역별 찾기",
+      "short_name": "지역",
+      "description": "전국 지역별 출장마사지 정보",
+      "url": "/region/",
+      "icons": [{"src": "/favicon.svg", "sizes": "any"}]
+    },
+    {
+      "name": "서비스",
+      "short_name": "서비스",
+      "description": "코스별 마사지 서비스 안내",
+      "url": "/services/",
+      "icons": [{"src": "/favicon.svg", "sizes": "any"}]
+    },
+    {
+      "name": "매거진",
+      "short_name": "매거진",
+      "description": "건강·바디케어 콘텐츠",
+      "url": "/magazine/",
+      "icons": [{"src": "/favicon.svg", "sizes": "any"}]
+    },
+    {
+      "name": "예약 안내",
+      "short_name": "예약",
+      "description": "24시 예약·안내 전화",
+      "url": "tel:0508-202-4683",
+      "icons": [{"src": "/favicon.svg", "sizes": "any"}]
+    }
+  ]
+}
