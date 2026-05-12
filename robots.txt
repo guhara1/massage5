@@ -134,6 +134,10 @@ Disallow: /.github/
 Crawl-delay: 1
 
 # ================================================================
-# 7. 사이트맵
+# 7. 사이트맵 (인덱스 + 카테고리별 sub-sitemap)
 # ================================================================
 Sitemap: https://gandago.me/sitemap.xml
+Sitemap: https://gandago.me/sitemap-main.xml
+Sitemap: https://gandago.me/sitemap-region.xml
+Sitemap: https://gandago.me/sitemap-services.xml
+Sitemap: https://gandago.me/sitemap-magazine.xml

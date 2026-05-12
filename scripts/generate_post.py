@@ -639,15 +639,21 @@ def update_magazine_index() -> None:
     MAGAZINE_INDEX.write_text(html, encoding="utf-8")
 
 
-# ----- 사이트맵 갱신 -----
+# ----- 사이트맵 + RSS 갱신 -----
+
+MAGAZINE_SITEMAP = ROOT / "sitemap-magazine.xml"
+MAGAZINE_RSS = ROOT / "magazine" / "rss.xml"
+
 
 def update_sitemap(post_url: str) -> None:
-    if not SITEMAP.exists():
-        return
-    text = SITEMAP.read_text(encoding="utf-8")
-    if post_url in text:
-        return  # 이미 있음
+    """매거진 sub-sitemap에 새 글 추가."""
     today = datetime.now(KST).strftime("%Y-%m-%d")
+    target = MAGAZINE_SITEMAP if MAGAZINE_SITEMAP.exists() else SITEMAP
+    if not target.exists():
+        return
+    text = target.read_text(encoding="utf-8")
+    if post_url in text:
+        return
     entry = (
         f"  <url>\n"
         f"    <loc>{post_url}</loc>\n"
@@ -657,7 +663,53 @@ def update_sitemap(post_url: str) -> None:
         f"  </url>\n"
     )
     text = text.replace("</urlset>", entry + "</urlset>")
-    SITEMAP.write_text(text, encoding="utf-8")
+    target.write_text(text, encoding="utf-8")
+    # Touch sitemap index lastmod
+    if SITEMAP.exists():
+        idx = SITEMAP.read_text(encoding="utf-8")
+        idx = re.sub(
+            r'(<loc>[^<]*sitemap-magazine\.xml</loc>\s*<lastmod>)[^<]+(</lastmod>)',
+            rf'\g<1>{today}\g<2>',
+            idx
+        )
+        SITEMAP.write_text(idx, encoding="utf-8")
+
+
+def update_rss() -> None:
+    """매거진 RSS 피드 갱신 (전체 글 재생성)."""
+    posts = list_posts()  # 이미 정렬됨 (최신 첫번째)
+    items_html = []
+    for p in posts:
+        url = f"{DOMAIN}/magazine/posts/{p['slug']}.html"
+        pub_date = datetime.now(KST).strftime("%a, %d %b %Y %H:%M:%S +0900")
+        items_html.append(
+            f'    <item>\n'
+            f'      <title><![CDATA[{p["title"]}]]></title>\n'
+            f'      <link>{url}</link>\n'
+            f'      <guid isPermaLink="true">{url}</guid>\n'
+            f'      <description><![CDATA[{p["description"]}]]></description>\n'
+            f'      <pubDate>{pub_date}</pubDate>\n'
+            f'    </item>'
+        )
+    last_build = datetime.now(KST).strftime("%a, %d %b %Y %H:%M:%S +0900")
+    rss = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        '  <channel>\n'
+        '    <title>간다GO 매거진</title>\n'
+        f'    <link>{DOMAIN}/magazine/</link>\n'
+        f'    <atom:link href="{DOMAIN}/magazine/rss.xml" rel="self" type="application/rss+xml"/>\n'
+        '    <description>전국 출장마사지 정보와 바디케어·건강·라이프스타일 콘텐츠.</description>\n'
+        '    <language>ko-KR</language>\n'
+        '    <copyright>© 간다GO. All rights reserved.</copyright>\n'
+        f'    <lastBuildDate>{last_build}</lastBuildDate>\n'
+        '    <generator>간다GO Magazine Auto-Publisher</generator>\n'
+        + "\n".join(items_html) + "\n"
+        '  </channel>\n'
+        '</rss>\n'
+    )
+    MAGAZINE_RSS.parent.mkdir(parents=True, exist_ok=True)
+    MAGAZINE_RSS.write_text(rss, encoding="utf-8")
 
 
 # ----- 메인 -----
@@ -687,6 +739,9 @@ def main() -> int:
 
     update_sitemap(post_url)
     print(f"[ok] 사이트맵 갱신")
+
+    update_rss()
+    print(f"[ok] RSS 피드 갱신")
 
     topic["used"] = True
     topic["published_at"] = datetime.now(KST).strftime("%Y-%m-%d")

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>간다GO 매거진</title>
+    <link>https://gandago.me/magazine/</link>
+    <atom:link href="https://gandago.me/magazine/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>전국 출장마사지 정보와 바디케어·건강·라이프스타일 콘텐츠.</description>
+    <language>ko-KR</language>
+    <copyright>© 간다GO. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 12 May 2026 09:15:45 +0900</lastBuildDate>
+    <generator>간다GO Magazine Auto-Publisher</generator>
+    <item>
+      <title><![CDATA[역삼동 출장마사지, 야근 끝난 밤 테헤란로에서 90분 회복기]]></title>
+      <link>https://gandago.me/magazine/posts/yeoksam-evening-it.html</link>
+      <guid isPermaLink="true">https://gandago.me/magazine/posts/yeoksam-evening-it.html</guid>
+      <description><![CDATA[테헤란로 IT 회사에서 야근 후 자택에서 받은 출장마사지 경험담. 역삼동 직장인 시선으로 풀어낸 평일 저녁 피로 해소 이야기.]]></description>
+      <pubDate>Tue, 12 May 2026 09:15:45 +0900</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[출장마사지 처음 받기 전 알아두면 좋은 것들]]></title>
+      <link>https://gandago.me/magazine/posts/first-time-outcall-five-tips.html</link>
+      <guid isPermaLink="true">https://gandago.me/magazine/posts/first-time-outcall-five-tips.html</guid>
+      <description><![CDATA[출장마사지를 처음 받기 전 꼭 알아두면 좋은 다섯 가지를 솔직하게 정리했습니다. 안전, 예약, 공간 준비, 진행 흐름, 다음 날 컨디션까지 한 번에.]]></description>
+      <pubDate>Tue, 12 May 2026 09:15:45 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
