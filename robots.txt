@@ -1,42 +1,84 @@
 # robots.txt for gandago.me
 # 전국 출장마사지 정보 안내 플랫폼
+# 최종 갱신: 2026-05-12
 
-# ===== 일반 크롤러 (기본 허용) =====
-User-agent: *
-Allow: /
-Disallow: /scripts/
-Disallow: /.github/
-Crawl-delay: 1
-
-# ===== Google =====
+# ================================================================
+# 1. 구글 — 최우선 허용 (모든 경로, Crawl-delay 없음)
+# ================================================================
 User-agent: Googlebot
 Allow: /
+Disallow:
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow:
 
 User-agent: Googlebot-Mobile
 Allow: /
+Disallow:
+
+User-agent: Googlebot-News
+Allow: /
+Disallow:
+
+User-agent: Googlebot-Video
+Allow: /
+Disallow:
 
 User-agent: AdsBot-Google
 Allow: /
+Disallow:
 
-# ===== 네이버 =====
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Disallow:
+
+User-agent: Storebot-Google
+Allow: /
+Disallow:
+
+User-agent: Google-InspectionTool
+Allow: /
+Disallow:
+
+# ================================================================
+# 2. 네이버 — 최우선 허용 (모든 경로, Crawl-delay 없음)
+# ================================================================
 User-agent: Yeti
 Allow: /
+Disallow:
+
+User-agent: Yeti-Mobile
+Allow: /
+Disallow:
+
+User-agent: Yeti-Image
+Allow: /
+Disallow:
 
 User-agent: NaverBot
 Allow: /
+Disallow:
 
-# ===== 다음·카카오 =====
+User-agent: napsbot
+Allow: /
+Disallow:
+
+# ================================================================
+# 3. 기타 주요 검색엔진 (허용)
+# ================================================================
 User-agent: Daumoa
 Allow: /
 
-# ===== Bing =====
 User-agent: bingbot
 Allow: /
 
-# ===== AI·LLM 검색 크롤러 (트래픽 유입 허용) =====
+User-agent: Bingbot
+Allow: /
+
+# ================================================================
+# 4. AI·LLM 검색 크롤러 (트래픽 유입 허용)
+# ================================================================
 User-agent: GPTBot
 Allow: /
 
@@ -49,13 +91,21 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# ===== 악성·과부하 유발 크롤러 차단 =====
+User-agent: Applebot
+Allow: /
+
+# ================================================================
+# 5. 악성·과부하 유발 SEO 도구 (차단)
+# ================================================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -71,8 +121,19 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-# ===== 사이트맵 =====
-Sitemap: https://gandago.me/sitemap.xml
+User-agent: BLEXBot
+Disallow: /
 
-# ===== 호스트 정의 (선택) =====
-Host: https://gandago.me
+# ================================================================
+# 6. 그 외 모든 크롤러 (기본 허용 + 비공개 경로 차단)
+# ================================================================
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /.github/
+Crawl-delay: 1
+
+# ================================================================
+# 7. 사이트맵
+# ================================================================
+Sitemap: https://gandago.me/sitemap.xml
