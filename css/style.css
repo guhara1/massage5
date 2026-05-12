@@ -1532,10 +1532,11 @@ img { max-width: 100%; display: block; }
 .directory-grid .dir-btn.active::after { opacity: 1; }
 .directory-row .dir-btn.active:hover,
 .directory-grid .dir-btn.active:hover { transform: translateY(-2px); }
-.dir-empty { display: none; }
+.directory-grid .dir-empty,
+.directory-row .dir-empty { display: none; }
 
-.directory-row { grid-template-columns: repeat(9, 1fr); }
-.directory-grid { grid-template-columns: repeat(7, 1fr); }
+.directory-row { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.directory-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 
 @media (max-width: 1024px) {
   .directory-row { grid-template-columns: repeat(6, 1fr); }
