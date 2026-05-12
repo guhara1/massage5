@@ -9,7 +9,12 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <link rel="apple-touch-icon" href="../favicon.svg" />
 <link rel="canonical" href="https://gandago.me/services/men.html" />
+<meta property="og:title" content="남성전용 출장마사지 안내 - 운영 가이드" />
+<meta property="og:description" content="남성 고객 대상 출장마사지 안내. 운영 형태, 합법 영업 확인 절차, 코스 선택 가이드를 정리했습니다." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="간다GO" />
 <meta property="og:url" content="https://gandago.me/services/men.html" />
+<meta property="og:image" content="https://gandago.me/favicon.svg" />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -240,11 +245,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"어떤 코스가 가장 인기인가요?","acceptedAnswer":{"@type":"Answer","text":"타이 마사지 90분과 스포츠 마사지 60분이 가장 자주 선택됩니다. 운동·야근 회복 목적 모두에 적합합니다."}},
-    {"@type":"Question","name":"강도 조절이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 약·중·강 사전 협의가 가능합니다. 깊은 압을 원하시면 \"강\"으로 시작하시고, 부담스러우면 중간에도 조절 요청할 수 있습니다."}},
-    {"@type":"Question","name":"관리사 성별은 선택할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"남자 관리사·여성 관리사 모두 운영합니다. 본인 선호를 사전에 안내하시면 됩니다."}}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gandago.me/#org",
+      "name": "간다GO",
+      "alternateName": "GandaGO",
+      "url": "https://gandago.me/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gandago.me/favicon.svg"
+      },
+      "description": "전국 출장마사지 정보 안내 플랫폼",
+      "telephone": "+82-508-202-4683",
+      "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gandago.me/#website",
+      "url": "https://gandago.me/",
+      "name": "간다GO",
+      "alternateName": "전국 출장마사지 정보 플랫폼",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@id": "https://gandago.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gandago.me/services/men.html",
+      "url": "https://gandago.me/services/men.html",
+      "name": "남성전용",
+      "isPartOf": {
+        "@id": "https://gandago.me/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://gandago.me/services/men.html#breadcrumb"
+      },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gandago.me/services/men.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://gandago.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://gandago.me/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "남성전용",
+          "item": "https://gandago.me/services/men.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gandago.me/services/men.html#service",
+      "serviceType": "남성전용 출장마사지",
+      "name": "남성전용 출장 서비스",
+      "provider": {
+        "@id": "https://gandago.me/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "category": "Bodycare / Massage"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "어떤 코스가 가장 인기인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "타이 마사지 90분과 스포츠 마사지 60분이 가장 자주 선택됩니다. 운동·야근 회복 목적 모두에 적합합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "강도 조절이 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 약·중·강 사전 협의가 가능합니다. 깊은 압을 원하시면 \"강\"으로 시작하시고, 부담스러우면 중간에도 조절 요청할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "관리사 성별은 선택할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "남자 관리사·여성 관리사 모두 운영합니다. 본인 선호를 사전에 안내하시면 됩니다."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

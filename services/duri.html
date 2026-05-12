@@ -9,7 +9,12 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <link rel="apple-touch-icon" href="../favicon.svg" />
 <link rel="canonical" href="https://gandago.me/services/duri.html" />
+<meta property="og:title" content="두리코스 안내 - 2인 관리사 동시 진행 케어" />
+<meta property="og:description" content="두리코스 가이드. 2인 관리사가 동시 진행하는 케어의 흐름, 적합한 상황, 비용 구조, 예약 시 확인 사항을 정리했습니다." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="간다GO" />
 <meta property="og:url" content="https://gandago.me/services/duri.html" />
+<meta property="og:image" content="https://gandago.me/favicon.svg" />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -240,11 +245,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"두리코스는 일반 코스의 몇 배 비용인가요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 1.5~2배 수준이며, 90분 두리는 일반 90분의 약 2배 가격대가 표준입니다. 출장비도 2인 출장이 적용될 수 있어 사전 확인이 필요합니다."}},
-    {"@type":"Question","name":"일반 마사지보다 정말 효과가 좋나요?","acceptedAnswer":{"@type":"Answer","text":"동일 시간 대비 두 배의 자극이 들어가기 때문에 전신 풀림감이 빠릅니다. 다만 자극이 누적되어 일부 분께는 다음 날 약간의 근육통이 올 수 있습니다."}},
-    {"@type":"Question","name":"관리사 2명을 같은 성별로 지정할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 가능합니다. 여성 관리사 2명, 또는 남성·여성 혼합 등 사전 요청을 받습니다. 예약 시 명확히 안내해 주세요."}}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gandago.me/#org",
+      "name": "간다GO",
+      "alternateName": "GandaGO",
+      "url": "https://gandago.me/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gandago.me/favicon.svg"
+      },
+      "description": "전국 출장마사지 정보 안내 플랫폼",
+      "telephone": "+82-508-202-4683",
+      "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gandago.me/#website",
+      "url": "https://gandago.me/",
+      "name": "간다GO",
+      "alternateName": "전국 출장마사지 정보 플랫폼",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@id": "https://gandago.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gandago.me/services/duri.html",
+      "url": "https://gandago.me/services/duri.html",
+      "name": "두리코스",
+      "isPartOf": {
+        "@id": "https://gandago.me/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://gandago.me/services/duri.html#breadcrumb"
+      },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gandago.me/services/duri.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://gandago.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://gandago.me/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "두리코스",
+          "item": "https://gandago.me/services/duri.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gandago.me/services/duri.html#service",
+      "serviceType": "두리코스 출장마사지",
+      "name": "두리코스 출장 서비스",
+      "provider": {
+        "@id": "https://gandago.me/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "category": "Bodycare / Massage"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "두리코스는 일반 코스의 몇 배 비용인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "일반적으로 1.5~2배 수준이며, 90분 두리는 일반 90분의 약 2배 가격대가 표준입니다. 출장비도 2인 출장이 적용될 수 있어 사전 확인이 필요합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "일반 마사지보다 정말 효과가 좋나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "동일 시간 대비 두 배의 자극이 들어가기 때문에 전신 풀림감이 빠릅니다. 다만 자극이 누적되어 일부 분께는 다음 날 약간의 근육통이 올 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "관리사 2명을 같은 성별로 지정할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "대부분 가능합니다. 여성 관리사 2명, 또는 남성·여성 혼합 등 사전 요청을 받습니다. 예약 시 명확히 안내해 주세요."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

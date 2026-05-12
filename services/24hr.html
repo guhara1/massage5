@@ -9,7 +9,12 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <link rel="apple-touch-icon" href="../favicon.svg" />
 <link rel="canonical" href="https://gandago.me/services/24hr.html" />
+<meta property="og:title" content="24시간 출장마사지 안내 - 심야·새벽 운영 가이드" />
+<meta property="og:description" content="24시간 운영 출장마사지 가이드. 심야·새벽 시간대 이용, 가산 비용, 안전 확인 사항을 정리했습니다." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="간다GO" />
 <meta property="og:url" content="https://gandago.me/services/24hr.html" />
+<meta property="og:image" content="https://gandago.me/favicon.svg" />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -240,11 +245,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"새벽 3~5시도 정말 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"도심 중심부의 24시간 업체는 새벽 3~5시 출장도 가능합니다. 다만 외곽은 제한적이니 사전 통화로 확인하시는 것이 안전합니다."}},
-    {"@type":"Question","name":"심야 가산은 보통 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"업체별로 다르지만 0~2시 사이는 1만원, 2~5시 사이는 2~3만원이 일반적입니다. 일부 업체는 가산 없이 운영하기도 합니다."}},
-    {"@type":"Question","name":"다음 날 출근 전에 받아도 될까요?","acceptedAnswer":{"@type":"Answer","text":"60분 코스 + 새벽 4~5시 이전 종료라면 다음 날 출근에 무리가 적습니다. 90분 이상은 최소 4~5시간 수면 시간을 확보하시는 것이 좋습니다."}}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gandago.me/#org",
+      "name": "간다GO",
+      "alternateName": "GandaGO",
+      "url": "https://gandago.me/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gandago.me/favicon.svg"
+      },
+      "description": "전국 출장마사지 정보 안내 플랫폼",
+      "telephone": "+82-508-202-4683",
+      "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gandago.me/#website",
+      "url": "https://gandago.me/",
+      "name": "간다GO",
+      "alternateName": "전국 출장마사지 정보 플랫폼",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@id": "https://gandago.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gandago.me/services/24hr.html",
+      "url": "https://gandago.me/services/24hr.html",
+      "name": "24시간",
+      "isPartOf": {
+        "@id": "https://gandago.me/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://gandago.me/services/24hr.html#breadcrumb"
+      },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gandago.me/services/24hr.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://gandago.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://gandago.me/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "24시간",
+          "item": "https://gandago.me/services/24hr.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gandago.me/services/24hr.html#service",
+      "serviceType": "24시간 출장마사지",
+      "name": "24시간 출장 서비스",
+      "provider": {
+        "@id": "https://gandago.me/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "category": "Bodycare / Massage"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "새벽 3~5시도 정말 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "도심 중심부의 24시간 업체는 새벽 3~5시 출장도 가능합니다. 다만 외곽은 제한적이니 사전 통화로 확인하시는 것이 안전합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "심야 가산은 보통 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "업체별로 다르지만 0~2시 사이는 1만원, 2~5시 사이는 2~3만원이 일반적입니다. 일부 업체는 가산 없이 운영하기도 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "다음 날 출근 전에 받아도 될까요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "60분 코스 + 새벽 4~5시 이전 종료라면 다음 날 출근에 무리가 적습니다. 90분 이상은 최소 4~5시간 수면 시간을 확보하시는 것이 좋습니다."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

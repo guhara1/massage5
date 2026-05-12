@@ -9,7 +9,12 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <link rel="apple-touch-icon" href="../favicon.svg" />
 <link rel="canonical" href="https://gandago.me/services/skin.html" />
+<meta property="og:title" content="스킨케어 출장 안내 - 안면·바디 피부 관리" />
+<meta property="og:description" content="스킨케어(출장) 안면·바디 피부 관리 가이드. 코스 단계, 트러블 예방, 알러지 사전 확인 사항을 정리했습니다." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="간다GO" />
 <meta property="og:url" content="https://gandago.me/services/skin.html" />
+<meta property="og:image" content="https://gandago.me/favicon.svg" />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -240,11 +245,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"어떤 피부 타입에 어울리나요?","acceptedAnswer":{"@type":"Answer","text":"건성·복합성·민감성·트러블성 모두 적용 가능합니다. 다만 사용 화장품 라인이 본인 피부에 맞는지 사전 확인이 필요합니다."}},
-    {"@type":"Question","name":"출장 스킨케어가 매장과 효과 차이가 있나요?","acceptedAnswer":{"@type":"Answer","text":"도구·기기 측면에서 차이는 있을 수 있지만, 기본 5단계는 동일하게 진행됩니다. 고기기(LED·RF 등) 필요 시에는 매장 방문이 더 적합합니다."}},
-    {"@type":"Question","name":"관리 후 메이크업은 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"최소 4시간, 가능하면 24시간 후 가벼운 메이크업을 권합니다. 진정 단계 이후 외부 자극을 최소화하는 것이 중요합니다."}}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gandago.me/#org",
+      "name": "간다GO",
+      "alternateName": "GandaGO",
+      "url": "https://gandago.me/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gandago.me/favicon.svg"
+      },
+      "description": "전국 출장마사지 정보 안내 플랫폼",
+      "telephone": "+82-508-202-4683",
+      "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gandago.me/#website",
+      "url": "https://gandago.me/",
+      "name": "간다GO",
+      "alternateName": "전국 출장마사지 정보 플랫폼",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@id": "https://gandago.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gandago.me/services/skin.html",
+      "url": "https://gandago.me/services/skin.html",
+      "name": "스킨케어",
+      "isPartOf": {
+        "@id": "https://gandago.me/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://gandago.me/services/skin.html#breadcrumb"
+      },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gandago.me/services/skin.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://gandago.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://gandago.me/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "스킨케어",
+          "item": "https://gandago.me/services/skin.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gandago.me/services/skin.html#service",
+      "serviceType": "스킨케어 출장마사지",
+      "name": "스킨케어 출장 서비스",
+      "provider": {
+        "@id": "https://gandago.me/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "category": "Bodycare / Massage"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "어떤 피부 타입에 어울리나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "건성·복합성·민감성·트러블성 모두 적용 가능합니다. 다만 사용 화장품 라인이 본인 피부에 맞는지 사전 확인이 필요합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "출장 스킨케어가 매장과 효과 차이가 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "도구·기기 측면에서 차이는 있을 수 있지만, 기본 5단계는 동일하게 진행됩니다. 고기기(LED·RF 등) 필요 시에는 매장 방문이 더 적합합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "관리 후 메이크업은 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "최소 4시간, 가능하면 24시간 후 가벼운 메이크업을 권합니다. 진정 단계 이후 외부 자극을 최소화하는 것이 중요합니다."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

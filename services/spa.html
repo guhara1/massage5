@@ -9,7 +9,12 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <link rel="apple-touch-icon" href="../favicon.svg" />
 <link rel="canonical" href="https://gandago.me/services/spa.html" />
+<meta property="og:title" content="스파·사우나 안내 - 시설형 케어와 출장 옵션" />
+<meta property="og:description" content="스파·사우나 케어 가이드. 시설형 스파의 코스 구성, 출장 옵션 차이, 예약 시 확인 사항을 정리했습니다." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="간다GO" />
 <meta property="og:url" content="https://gandago.me/services/spa.html" />
+<meta property="og:image" content="https://gandago.me/favicon.svg" />
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -240,11 +245,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"출장형과 시설형 중 어떤 것이 좋나요?","acceptedAnswer":{"@type":"Answer","text":"긴 시간 휴식이 목적이면 시설형, 객실에서 차분히 받고 싶다면 출장형이 좋습니다. 출장형은 시설 비용이 빠지는 대신 출장비가 추가됩니다."}},
-    {"@type":"Question","name":"스파 코스에는 무엇이 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"업체별로 다르지만 일반적으로 아로마 바디 + 핫스톤 + 페이셜 중 2개가 포함됩니다. 옵션 추가는 별도 비용입니다."}},
-    {"@type":"Question","name":"호텔 부설 스파의 객실 출장도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"5성급 호텔 일부에서 객실 출장 옵션을 운영합니다. 호텔 컨시어지를 통해 사전 예약하시는 것이 가장 매끄럽습니다."}}
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gandago.me/#org",
+      "name": "간다GO",
+      "alternateName": "GandaGO",
+      "url": "https://gandago.me/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gandago.me/favicon.svg"
+      },
+      "description": "전국 출장마사지 정보 안내 플랫폼",
+      "telephone": "+82-508-202-4683",
+      "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gandago.me/#website",
+      "url": "https://gandago.me/",
+      "name": "간다GO",
+      "alternateName": "전국 출장마사지 정보 플랫폼",
+      "inLanguage": "ko-KR",
+      "publisher": {
+        "@id": "https://gandago.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gandago.me/services/spa.html",
+      "url": "https://gandago.me/services/spa.html",
+      "name": "스파/사우나",
+      "isPartOf": {
+        "@id": "https://gandago.me/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://gandago.me/services/spa.html#breadcrumb"
+      },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gandago.me/services/spa.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://gandago.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://gandago.me/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "스파/사우나",
+          "item": "https://gandago.me/services/spa.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gandago.me/services/spa.html#service",
+      "serviceType": "스파/사우나 출장마사지",
+      "name": "스파/사우나 출장 서비스",
+      "provider": {
+        "@id": "https://gandago.me/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "category": "Bodycare / Massage"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "출장형과 시설형 중 어떤 것이 좋나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "긴 시간 휴식이 목적이면 시설형, 객실에서 차분히 받고 싶다면 출장형이 좋습니다. 출장형은 시설 비용이 빠지는 대신 출장비가 추가됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "스파 코스에는 무엇이 포함되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "업체별로 다르지만 일반적으로 아로마 바디 + 핫스톤 + 페이셜 중 2개가 포함됩니다. 옵션 추가는 별도 비용입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "호텔 부설 스파의 객실 출장도 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5성급 호텔 일부에서 객실 출장 옵션을 운영합니다. 호텔 컨시어지를 통해 사전 예약하시는 것이 가장 매끄럽습니다."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
