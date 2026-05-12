@@ -83,27 +83,14 @@ img { max-width: 100%; display: block; }
   height: 72px;
 }
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.5px;
-}
-.brand .logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 16px;
 }
-.brand .brand-name { color: var(--text); }
-.brand .brand-name .accent { color: var(--primary); }
+.brand .brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 
 .nav {
   display: flex;
@@ -1940,8 +1927,7 @@ details.faq p {
   color: #94A3B8;
   margin: 0 0 18px;
 }
-.site-footer .brand { color: #fff; margin-bottom: 12px; }
-.site-footer .brand .brand-name { color: #fff; }
+.site-footer .brand { margin-bottom: 12px; }
 
 /* Brand: simple bordered tel */
 .footer-brand .footer-tel {
