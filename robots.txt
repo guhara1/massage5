@@ -1,4 +1,78 @@
+# robots.txt for gandago.me
+# 전국 출장마사지 정보 안내 플랫폼
+
+# ===== 일반 크롤러 (기본 허용) =====
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /.github/
+Crawl-delay: 1
 
+# ===== Google =====
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# ===== 네이버 =====
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+# ===== 다음·카카오 =====
+User-agent: Daumoa
+Allow: /
+
+# ===== Bing =====
+User-agent: bingbot
+Allow: /
+
+# ===== AI·LLM 검색 크롤러 (트래픽 유입 허용) =====
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ===== 악성·과부하 유발 크롤러 차단 =====
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ===== 사이트맵 =====
 Sitemap: https://gandago.me/sitemap.xml
+
+# ===== 호스트 정의 (선택) =====
+Host: https://gandago.me
