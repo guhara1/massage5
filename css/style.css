@@ -2673,3 +2673,12 @@ details.faq p {
   .hero { padding: 56px 0 40px; }
   .section { padding: 48px 0; }
 }
+
+/* Off-screen rendering deferral — skips layout/paint until near viewport */
+.article-section,
+.region-section,
+.site-footer,
+.section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
