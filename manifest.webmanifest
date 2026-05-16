@@ -45,7 +45,7 @@
       "name": "예약 안내",
       "short_name": "예약",
       "description": "24시 예약·안내 전화",
-      "url": "tel:0508-202-4683",
+      "url": "tel:0508-202-4743",
       "icons": [{"src": "/favicon.svg", "sizes": "any"}]
     }
   ]

@@ -58,14 +58,14 @@
   // ===== Inject floating call CTA (모든 페이지 공통) =====
   if (!document.querySelector('.float-call')) {
     const a = document.createElement('a');
-    a.href = 'tel:0508-202-4683';
+    a.href = 'tel:0508-202-4743';
     a.className = 'float-call';
-    a.setAttribute('aria-label', '예약 전화 0508-202-4683');
+    a.setAttribute('aria-label', '예약 전화 0508-202-4743');
     a.innerHTML =
       '<span class="fc-icon" aria-hidden="true">☎</span>' +
       '<span class="fc-text">' +
         '<span class="fc-label">예약·안내 전화</span>' +
-        '<span class="fc-num">0508-202-4683</span>' +
+        '<span class="fc-num">0508-202-4743</span>' +
       '</span>';
     document.body.appendChild(a);
   }
