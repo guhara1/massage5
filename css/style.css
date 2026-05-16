@@ -748,6 +748,11 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 .cta-call-image {
+  background-image: url('../assets/therapist-hero.webp');
+  background-image: image-set(
+    url('../assets/therapist-hero.avif') type('image/avif'),
+    url('../assets/therapist-hero.webp') type('image/webp')
+  );
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -755,7 +760,6 @@ img { max-width: 100%; display: block; }
   min-height: 280px;
   position: relative;
   border-right: 1px solid rgba(255,255,255,0.2);
-  /* 이미지: therapist-hero.png (jpg 업로드 시 자동 적용) */
 }
 .cta-call-body {
   padding: 36px 40px;
