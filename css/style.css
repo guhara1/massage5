@@ -91,12 +91,12 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.5px;
 }
 .brand .brand-logo {
-  height: 56px;
+  height: 72px;
   width: auto;
   display: block;
 }
 @media (max-width: 700px) {
-  .brand .brand-logo { height: 44px; }
+  .brand .brand-logo { height: 56px; }
 }
 
 .nav {
@@ -1939,7 +1939,7 @@ details.faq p {
   margin: 0 0 18px;
 }
 .site-footer .brand { margin-bottom: 12px; }
-.site-footer .brand .brand-logo { height: 56px; width: auto; }
+.site-footer .brand .brand-logo { height: 72px; width: auto; }
 
 /* Brand: simple bordered tel */
 .footer-brand .footer-tel {
