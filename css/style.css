@@ -2586,6 +2586,77 @@ details.faq p {
   border-color: var(--primary);
   color: var(--primary);
 }
+
+/* Service-page byline + safety authority citations */
+.service-byline {
+  margin-top: 12px !important;
+}
+.service-deep h3,
+.service-extra h3 {
+  margin-top: 18px;
+}
+.authority-citations {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--bg-alt);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+}
+.authority-citations h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--text);
+}
+.authority-citations .sub-desc {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.authority-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.authority-list li {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+.authority-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+.authority-list a {
+  color: var(--primary);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.citation-note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+.hygiene-source-note {
+  margin-top: 18px;
+  padding: 12px 14px;
+  background: var(--primary-tint);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-soft);
+}
+.hygiene-source-note a {
+  color: var(--primary);
+  text-decoration: underline;
+}
 @media (max-width: 720px) {
   .region-siblings-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
