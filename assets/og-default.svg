@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="간다GO - 전국 출장마사지 정보 플랫폼">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B5F58"/>
+      <stop offset="100%" stop-color="#084945"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.15" r="0.6">
+      <stop offset="0%" stop-color="#0EA89B" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0EA89B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0EA89B"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(0,0)" opacity="0.08">
+    <circle cx="1050" cy="120" r="220" fill="#FFFFFF"/>
+    <circle cx="120" cy="540" r="160" fill="#FFFFFF"/>
+  </g>
+
+  <rect x="80" y="80" width="64" height="6" rx="3" fill="url(#accentBar)"/>
+
+  <text x="80" y="180" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="34" font-weight="700" fill="#B7F0E8" letter-spacing="2">GANDAGO · 간다GO</text>
+
+  <text x="80" y="300" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="82" font-weight="900" fill="#FFFFFF" letter-spacing="-2">전국 출장마사지,</text>
+  <text x="80" y="400" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="82" font-weight="900" fill="#FFFFFF" letter-spacing="-2">한 곳에서 비교하세요.</text>
+
+  <text x="80" y="480" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="28" font-weight="500" fill="#CBD5E1">사업자 정보·가격·후기를 검증된 플랫폼에서.</text>
+
+  <g transform="translate(80,540)">
+    <rect width="180" height="48" rx="24" fill="#FFFFFF"/>
+    <text x="90" y="32" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="20" font-weight="700" fill="#0B5F58">gandago.me</text>
+  </g>
+
+  <g transform="translate(290,540)">
+    <rect width="220" height="48" rx="24" fill="rgba(255,255,255,0.12)" stroke="#FFFFFF" stroke-opacity="0.35"/>
+    <text x="110" y="32" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="18" font-weight="600" fill="#FFFFFF">24시 0508-202-4743</text>
+  </g>
+</svg>

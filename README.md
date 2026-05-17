@@ -46,3 +46,11 @@ npx serve .
 
 저장소의 Settings → Pages → Source = `Deploy from a branch`, Branch = `main` (또는
 원하는 브랜치) → `/ (root)` 선택 후 저장하면 됩니다.
+
+## OG 이미지
+
+- 기본 OG 이미지는 `/assets/og-default.svg` (1200×630)에 들어 있습니다.
+- 일부 SNS·크롤러는 SVG OG 이미지를 인식하지 못하므로, 동일 경로에 PNG/JPG
+  버전을 추가 배포하면 호환성이 가장 좋습니다 (예: `og-default.png`).
+- PNG 추가 후에는 페이지의 `<meta property="og:image">`와 JSON-LD의 `image`
+  필드를 `og-default.png`로 일괄 교체할 수 있습니다 (참고: `scripts/update_og_image.py`).
