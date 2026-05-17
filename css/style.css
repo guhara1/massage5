@@ -2485,6 +2485,34 @@ details.faq p {
   color: var(--primary);
   text-decoration: underline;
 }
+
+/* Footer legal row — site-wide */
+.footer-legal {
+  background: #0B1220;
+  color: #94A3B8;
+  border-top: 1px solid #1F2937;
+}
+.footer-legal .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  padding: 14px 24px;
+  font-size: 13px;
+  align-items: center;
+}
+.footer-legal a {
+  color: #CBD5E1;
+}
+.footer-legal a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.footer-legal .sep {
+  color: #475569;
+}
+@media (max-width: 720px) {
+  .footer-legal .container { gap: 4px 12px; font-size: 12px; }
+}
 .card-date {
   font-size: 11px;
   font-weight: 700;
