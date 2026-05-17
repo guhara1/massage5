@@ -2464,6 +2464,27 @@ details.faq p {
   border-left: 1px solid #CBD5E1;
   color: #64748B;
 }
+.post-meta a[rel="author"] {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 1px dashed rgba(11,95,88,.4);
+}
+.post-meta a[rel="author"]:hover {
+  border-bottom-style: solid;
+}
+.post-byline-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748B;
+  background: var(--primary-tint);
+  border-left: 3px solid var(--primary);
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+.post-byline-note a {
+  color: var(--primary);
+  text-decoration: underline;
+}
 .card-date {
   font-size: 11px;
   font-weight: 700;
