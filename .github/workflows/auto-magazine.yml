@@ -37,7 +37,7 @@ jobs:
         id: commit
         run: |
           git config user.name "Magazine Bot"
-          git config user.email "bot@gandago.me"
+          git config user.email "bot@gandago-massage5.netlify.app"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -58,6 +58,6 @@ jobs:
         if: steps.commit.outputs.pushed == 'true'
         run: |
           curl -s -o /dev/null -w "Google sitemap ping: %{http_code}\n" \
-            "https://www.google.com/ping?sitemap=https://gandago.me/sitemap.xml" || true
+            "https://www.google.com/ping?sitemap=https://gandago-massage5.netlify.app/sitemap.xml" || true
           curl -s -o /dev/null -w "Bing sitemap ping: %{http_code}\n" \
-            "https://www.bing.com/ping?sitemap=https://gandago.me/sitemap.xml" || true
+            "https://www.bing.com/ping?sitemap=https://gandago-massage5.netlify.app/sitemap.xml" || true

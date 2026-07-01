@@ -1,4 +1,4 @@
-# robots.txt for gandago.me
+# robots.txt for gandago-massage5.netlify.app
 # 전국 출장마사지 정보 안내 플랫폼
 # 최종 갱신: 2026-05-12
 
@@ -141,8 +141,8 @@ Crawl-delay: 1
 # ================================================================
 # 7. 사이트맵 (인덱스 + 카테고리별 sub-sitemap)
 # ================================================================
-Sitemap: https://gandago.me/sitemap.xml
-Sitemap: https://gandago.me/sitemap-main.xml
-Sitemap: https://gandago.me/sitemap-region.xml
-Sitemap: https://gandago.me/sitemap-services.xml
-Sitemap: https://gandago.me/sitemap-magazine.xml
+Sitemap: https://gandago-massage5.netlify.app/sitemap.xml
+Sitemap: https://gandago-massage5.netlify.app/sitemap-main.xml
+Sitemap: https://gandago-massage5.netlify.app/sitemap-region.xml
+Sitemap: https://gandago-massage5.netlify.app/sitemap-services.xml
+Sitemap: https://gandago-massage5.netlify.app/sitemap-magazine.xml
