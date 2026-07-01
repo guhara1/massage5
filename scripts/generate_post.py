@@ -24,7 +24,7 @@ import urllib.error
 from anthropic import Anthropic
 
 ROOT = Path(__file__).resolve().parent.parent
-DOMAIN = "https://gandago.me"
+DOMAIN = "https://gandago-massage5.netlify.app"
 KST = timezone(timedelta(hours=9))
 
 POSTS_DIR = ROOT / "magazine" / "posts"
@@ -658,7 +658,7 @@ INDEXNOW_ENDPOINTS = [
 def ping_indexnow(post_url: str) -> None:
     """IndexNow API 핑 - Bing·Yandex 즉시 색인 요청."""
     payload = json.dumps({
-        "host": "gandago.me",
+        "host": "gandago-massage5.netlify.app",
         "key": INDEXNOW_KEY,
         "keyLocation": INDEXNOW_KEY_LOCATION,
         "urlList": [post_url, f"{DOMAIN}/magazine/", f"{DOMAIN}/magazine/rss.xml"],
@@ -759,7 +759,7 @@ def update_rss() -> None:
     )
     MAGAZINE_RSS.parent.mkdir(parents=True, exist_ok=True)
     MAGAZINE_RSS.write_text(rss, encoding="utf-8")
-    # 루트 미러 (gandago.me/rss.xml 도 작동하게)
+    # 루트 미러 (gandago-massage5.netlify.app/rss.xml 도 작동하게)
     (ROOT / "rss.xml").write_text(rss, encoding="utf-8")
 
 

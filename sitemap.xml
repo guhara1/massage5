@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://gandago.me/sitemap-main.xml</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://gandago-massage5.netlify.app/sitemap-main.xml</loc>
+    <lastmod>2026-07-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://gandago.me/sitemap-region.xml</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://gandago-massage5.netlify.app/sitemap-region.xml</loc>
+    <lastmod>2026-07-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://gandago.me/sitemap-services.xml</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://gandago-massage5.netlify.app/sitemap-services.xml</loc>
+    <lastmod>2026-07-01</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://gandago.me/sitemap-magazine.xml</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://gandago-massage5.netlify.app/sitemap-magazine.xml</loc>
+    <lastmod>2026-07-01</lastmod>
   </sitemap>
 </sitemapindex>
