@@ -48,16 +48,25 @@ jobs:
           git push
           echo "pushed=true" >> $GITHUB_OUTPUT
 
-      # Cloudflare Pages 배포 대기 (커밋 후 약 60초)
+      # Netlify 배포 대기 (커밋 후 약 90초)
       - name: Wait for deploy
         if: steps.commit.outputs.pushed == 'true'
         run: sleep 90
 
-      # 추가 색인 ping (배포된 URL 기준으로 다시 한 번 - Naver Search Advisor 무시되지 않도록)
-      - name: Re-ping IndexNow after deploy
+      # IndexNow 즉시 색인 제출 (Bing·Yandex·Seznam 즉시 반영)
+      # Google/Bing 의 sitemap ping 엔드포인트는 2023년 폐기되어 IndexNow 로 대체함.
+      - name: Submit URLs to IndexNow
         if: steps.commit.outputs.pushed == 'true'
         run: |
-          curl -s -o /dev/null -w "Google sitemap ping: %{http_code}\n" \
-            "https://www.google.com/ping?sitemap=https://gandago-massage5.netlify.app/sitemap.xml" || true
-          curl -s -o /dev/null -w "Bing sitemap ping: %{http_code}\n" \
-            "https://www.bing.com/ping?sitemap=https://gandago-massage5.netlify.app/sitemap.xml" || true
+          KEY=16e565e44992937c568b7cada0d76106
+          HOST=gandago-massage5.netlify.app
+          KEYLOC="https://$HOST/$KEY.txt"
+          # 새로 발행된 최신 매거진 글 URL + 핵심 허브 URL 제출
+          LATEST=$(grep -oE 'https://[^<]+' sitemap-magazine.xml | tail -1)
+          for U in "https://$HOST/" "https://$HOST/magazine/" "$LATEST"; do
+            [ -z "$U" ] && continue
+            curl -s -o /dev/null -w "IndexNow %{http_code}: $U\n" \
+              "https://api.indexnow.org/indexnow?url=$U&key=$KEY&keyLocation=$KEYLOC" || true
+          done
+          # 참고: Google 은 ping API 가 없어 Search Console 사이트맵 자동 크롤에 의존,
+          #       Naver 는 Search Advisor 에서 sitemap.xml 제출 + '웹 페이지 수집' 요청으로 색인.
