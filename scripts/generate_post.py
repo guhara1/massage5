@@ -609,7 +609,7 @@ def update_magazine_index() -> None:
     <div class="section-head">
       <span class="eyebrow">Coming Soon</span>
       <h2>곧 업데이트될 글</h2>
-      <p>매주 월·수·금 오전에 새 글이 올라옵니다.</p>
+      <p>매주 월요일 오전에 새 글이 한 편씩 올라옵니다.</p>
     </div>
     <div class="post-grid">
 {coming_cards}
